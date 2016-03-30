@@ -11,7 +11,7 @@ This project provides python bindings for the SpineML schema, which can be found
 
 Parsing an existing SpineML specification is easy to accumplish, by providing the path to the schema-specific XML file.
 
-<code>
+```
 import experiment as exp
 import network as net
 import component as com
@@ -19,7 +19,7 @@ import component as com
 c = com.parse('Examples/LeakyIAF.xml')
 n = net.parse('Examples/model.xml')
 e = exp.parse('Examples/experiment0.xml')
-</code>
+```
 
 This will populate the variables with the relavant objects. 
 
@@ -28,9 +28,9 @@ This will populate the variables with the relavant objects.
 First, to create a component:
 
 <code>
-# Create a new neuron body
+&#35 Create a new neuron body
 c = com.ComponentClassType('ComName','neuronbody')
-# Add neuron parameters
+&#35 Add neuron parameters
 c.add_Parameter(com.ParameterType('C','nS'))
 c.add_Parameter(com.ParameterType('C','nS'))
 c.add_Parameter(com.ParameterType('Vt','mV'))
@@ -98,7 +98,7 @@ libSpineML will create a programatic way to build up declaritive SpineML models,
 
 ## Installation
 
-In Progress
+<code> python setup.py install </code>
 
 ## API Reference
 
@@ -106,7 +106,7 @@ Depending on the size of the project, if it is small and simple enough the refer
 
 ## Tests
 
-In Progress
+Testing is achieved using the <code> py.test </code> command. Further Continuous integration testing is achieved using Travis CI.
 
 ## Contributors
 
@@ -114,13 +114,13 @@ Adam Tomkins
 
 ## License
 
-GNU General Public License 
+GNU General Public License 3.0
 
 ## Code Generation
 
-generate base files from generateDS:
+generate base files using generateDS, in combination with the schema files you can find on the [SpineML site](http://bimpa.group.shef.ac.uk/SpineML/index.php/Documentation) 
 
-python generateDS.py -o ../../Work/libSpineML/experiment.py  ../SpineML/Schema/SpineMLExperimentLayer.xsd 
-python generateDS.py -o ../../Work/libSpineML/network.py  ../SpineML/Schema/SpineMLNetworkLayer.xsd 
-python generateDS.py -o ../../Work/libSpineML/component.py  ../SpineML/Schema/SpineMLComponentLayer.xsd
+python generateDS.py -o experiment.py  SpineMLExperimentLayer.xsd 
+python generateDS.py -o network.py  SpineMLNetworkLayer.xsd 
+python generateDS.py -o component.py  SpineMLComponentLayer.xsd
 
