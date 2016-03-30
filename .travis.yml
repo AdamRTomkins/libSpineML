@@ -5,5 +5,7 @@ python:
 # command to run tests
 before_install:
     - pip install pytest pytest-cov
+install:
+  - "pip install -e ."
 script:
     - py.test
