@@ -63,21 +63,29 @@ con = com.OnConditionType('integrating',sa,eo,None,tr)
 
 With these we can create a regime:
 
-```reg = com.RegimeType('integrating',td,con)```
+```
+reg = com.RegimeType('integrating',td,con)
+```
 
 and feed this into the dynamics:
-```dyn = com.DynamicsType('integrating',reg)```
 
-Here we have to specify the 
-    state variables
+```
+dyn = com.DynamicsType('integrating',reg)
+```
+
+Here we have to specify the state variables
+
 ```
 dyn.add_StateVariable(com.StateVariableType('V','mV'))
 ```
 
 and finally we can set these dynamics to the component
-```c.set_Dynamics(dyn)```
+```
+c.set_Dynamics(dyn) 
+```
 
 and finally add any ports:
+
 ```
 c.add_Port(com.EventSendPortType('spike'))
 c.add_Port(com.AnalogReducePortType('I_syn','+','mA'))
@@ -94,11 +102,15 @@ libSpineML will create a programatic way to build up declaritive SpineML models,
 
 ## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+In Progress
 
 ## Tests
 
-Testing is achieved using the <code> py.test </code> command. Further Continuous integration testing is achieved using Travis CI.
+This project uses the pytest framework, you can run tests using <code>python setup.py test</code>
+
+Further testing is achieved using the <code> py.test </code> command. Continuous integration testing is achieved using Travis CI.
+
+For code coverage, [pytest-cov](https://pypi.python.org/pypi/pytest-cov) is required which can be installed easily with pip using <code>pip install pytest-cov</code>. With this the code coverage can be tested using the command <code> py.test --cov . </code>.
 
 ## Contributors
 

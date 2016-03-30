@@ -9,5 +9,7 @@ setup(name = "libSpineML",
       packages=["libSpineML"],
       install_requires=[
           'lxml >= 3.3.0'
-      ]
+      ],
+      setup_requires=['pytest-runner'],
+      tests_require=['pytest']
       )
