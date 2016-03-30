@@ -6,3 +6,5 @@ def test_component_basic_instantiation():
     assert type(c) is com.ComponentClassType
 
 
+
+
