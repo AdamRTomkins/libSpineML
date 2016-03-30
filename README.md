@@ -27,69 +27,61 @@ This will populate the variables with the relavant objects.
 
 First, to create a component:
 
-<code>
-&#35 Create a new neuron body
+```
+# Create a new neuron body
 c = com.ComponentClassType('ComName','neuronbody')
-&#35 Add neuron parameters
+# Add neuron parameters
 c.add_Parameter(com.ParameterType('C','nS'))
 c.add_Parameter(com.ParameterType('C','nS'))
 c.add_Parameter(com.ParameterType('Vt','mV'))
 c.add_Parameter(com.ParameterType('Er','mV'))
 c.add_Parameter(com.ParameterType('Vr','mV'))
 c.add_Parameter(com.ParameterType('R','MOhm'))
-</code>
+```
 
 The majority of a component is defined within a dynamics tag, so first we will build up a dynamic object and assign it to our object using c.set_Dynamics()
 
-A dynamics regime takes:
-    initial regime
-    regime
-    StateVariables
-    Alias?
+A dynamics regime takes an initial regime, a regime object and State Variables
 
 Primerily we will set up a new regime using
-<code>reg = com.RegimeType(name='integrating',...</code>
+```reg = com.RegimeType(name='integrating',...```
 
 Which will require a new Time Derivitive
-<code>
+```
 td = com.TimeDerivativeType('V', '((I_Syn) / C) + (Vr - V) / (R*C)')
-</code>
+```
 
-And an On Condition:
-    which in turn requires
-        State Assignments
-        Triggers
-        Events
+And an On Condition, which in turn requires State Assignments, Triggers and Events
 
-<code>
+```
 sa = com.StateAssignmentType('V','Vr')
 tr = com.TriggerType('V > Vt')
 eo = com.EventOutType('spike')
 # Create the On Condition
 con = com.OnConditionType('integrating',sa,eo,None,tr)
-</code>
+```
 
 With these we can create a regime:
 
-<code>reg = com.RegimeType('integrating',td,con)</code>
+```reg = com.RegimeType('integrating',td,con)```
 
 and feed this into the dynamics:
-<code>dyn = com.DynamicsType('integrating',reg)</code>
+```dyn = com.DynamicsType('integrating',reg)```
 
 Here we have to specify the 
     state variables
-<code>
+```
 dyn.add_StateVariable(com.StateVariableType('V','mV'))
-</code>
+```
 
 and finally we can set these dynamics to the component
-<code>c.set_Dynamics(dyn)</code>
+```c.set_Dynamics(dyn)```
 
 and finally add any ports:
-<code>
+```
 c.add_Port(com.EventSendPortType('spike'))
 c.add_Port(com.AnalogReducePortType('I_syn','+','mA'))
-</code>
+```
 
 
 ## Motivation
@@ -98,7 +90,7 @@ libSpineML will create a programatic way to build up declaritive SpineML models,
 
 ## Installation
 
-<code> python setup.py install </code>
+``` python setup.py install ```
 
 ## API Reference
 
