@@ -1,2 +1,0 @@
-[run]
-omit = libSpineML/experiment.py,libSpineML/network.py,libSpineML/component.py

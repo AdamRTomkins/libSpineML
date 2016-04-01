@@ -11,9 +11,9 @@ through the other support classes, or parse directly from XML
 ## export each
 
 
-import network    as spineML_Network      # SpineML layers
-import experiment as spineML_Experiment
-import component  as spineML_Component
+import smlExperiment as spineML_Experiment
+import smlNetwork    as spineML_Network      # SpineML layers
+import smlComponent  as spineML_Component
 
 class Bundle(object):
     """First line of a docstring is short and next to the quotes.

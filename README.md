@@ -25,6 +25,21 @@ e = exp.parse('Examples/experiment0.xml')
 
 This will populate the variables with the relavant objects. 
 
+Importantly, parsing returns a SpineMLType, as the highest level XML tag.
+
+### SpineML exporting
+
+Our individual SpineML Classes can export XML generated through the programatic interface, using the <code>export()</code> function.
+
+```
+import sys
+from libSpineML import experiment
+x = experiment.SpineMLType()
+x.add_Experiment(experiment.ExperimentType())
+x.export(sys.stdout,0)
+```
+
+
 ### Create a Specification
 
 First, to create a component:
