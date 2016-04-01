@@ -10,7 +10,6 @@ through the other support classes, or parse directly from XML
 ## export all
 ## export each
 
-
 import smlExperiment as spineML_Experiment
 import smlNetwork    as spineML_Network      # SpineML layers
 import smlComponent  as spineML_Component
@@ -28,10 +27,10 @@ class Bundle(object):
     def __init__(self, experiments=None, networks=None, components=None):
         if type(experiments) is not type(None):
             if type(experiments) is spineML_Experiment.SpineMLType:
-                self.experiments.append(experiment)
+                self.experiments.append(experiments)
             elif type(experiments) is list:
                 for e in experiments:
-                    if type(e) is spineML_Experiment.SpineMLType:
+                    if type(e) is not spineML_Experiment.SpineMLType:
                         raise TypeError('Invalid Experiment Input: %s' % str(type(e)))
                     else:
                         self.experiments.append(e)
@@ -44,7 +43,7 @@ class Bundle(object):
                 self.networks.append(networks)
             elif type(networks) is list:
                 for n in networks:
-                    if type(n) is spineML_Network.network.SpineMLType:
+                    if type(n) is not spineML_Network.SpineMLType:
                         raise TypeError('Invalid Network Input: %s' % str(type(n)))
                     else:
                         self.networks.append(n)
@@ -56,7 +55,7 @@ class Bundle(object):
                 self.components.append(components)
             elif type(components) is list:
                 for c in components:
-                    if type(c) is spineML_Component.SpineMLType:
+                    if type(c) is not spineML_Component.SpineMLType:
                         raise TypeError('Invalid Component Input: %s' % str(type(c)))
                     else:
                         self.components.append(c)
@@ -81,7 +80,7 @@ class Bundle(object):
         if type(network) is spineML_Network.SpineMLType:
             self.networks.append(network)
         elif type(network) is str:  
-            self.networks.append(SpineML_Network.parse(network))
+            self.networks.append(spineML_Network.parse(network))
         else:
             raise TypeError('Invalid Network Input %s' % str(type(network)))
 
@@ -92,7 +91,7 @@ class Bundle(object):
         if type(component) is spineML_Component.SpineMLType:
             self.components.append(component)
         elif type(component) is str:
-            self.components.append(SpineML_Component.parse(component)) 
+            self.components.append(spineML_Component.parse(component)) 
         else:
             raise TypeError('Invalid Component Input %s' % str(type(component)))
 

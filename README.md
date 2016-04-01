@@ -127,8 +127,7 @@ This project uses the pytest framework, you can run tests using <code>python set
 
 Further testing is achieved using the <code> py.test </code> command. Continuous integration testing is achieved using Travis CI.
 
-For code coverage, [pytest-cov](https://pypi.python.org/pypi/pytest-cov) is required which can be installed easily with pip using <code>pip install pytest-cov</code>. With this the code coverage can be tested using the command <code> py.test --cov . </code>.
-
+For code coverage, [pytest-cov](https://pypi.python.org/pypi/pytest-cov) is required which can be installed easily with pip using <code>pip install pytest-cov</code>. With this the code coverage can be tested using the command <code>py.test --cov=libSpineML tests/</code> 
 [![Build Status](https://travis-ci.org/AdamRTomkins/libSpineML.svg?branch=master)](https://travis-ci.org/AdamRTomkins/libSpineML)
 
 ## Contributors
