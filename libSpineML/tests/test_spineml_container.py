@@ -117,7 +117,7 @@ def test_bundle_experiment_parsing():
     from libSpineML import smlExperiment
     from libSpineML import smlBundle
     c = smlBundle.Bundle()
-    c.add_experiment('tests/test_data/experiment0.xml')
+    c.add_experiment('libSpineML/tests/test_data/experiment0.xml')
     assert type(c.experiments[0]) == smlExperiment.SpineMLType
 
 def test_bundle_network_parsing():
@@ -125,7 +125,7 @@ def test_bundle_network_parsing():
     from libSpineML import smlNetwork
     from libSpineML import smlBundle
     c = smlBundle.Bundle()
-    c.add_network('tests/test_data/model.xml')
+    c.add_network('libSpineML/tests/test_data/model.xml')
     assert type(c.networks[0]) == smlNetwork.SpineMLType
 
 def test_bundle_component_parsing():
@@ -133,7 +133,7 @@ def test_bundle_component_parsing():
     from libSpineML import smlComponent
     from libSpineML import smlBundle
     c = smlBundle.Bundle()
-    c.add_component('tests/test_data/LeakyIAF.xml')
+    c.add_component('libSpineML/tests/test_data/LeakyIAF.xml')
     assert type(c.components[0]) == smlComponent.SpineMLType
 
 
