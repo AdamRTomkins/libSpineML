@@ -4,8 +4,8 @@
 def test_bundle_creation_instantiation():
     import libSpineML
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
-    assert type(c) is smlBundle.Bundle
+    b = smlBundle.Bundle()
+    assert type(b) is smlBundle.Bundle
 
 def test_bundle_creation_loaded_experiment_list_instantiation():
     import libSpineML
@@ -116,25 +116,25 @@ def test_bundle_experiment_parsing():
     import libSpineML
     from libSpineML import smlExperiment
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
-    c.add_experiment('libSpineML/tests/test_data/experiment0.xml')
-    assert type(c.experiments[0]) == smlExperiment.SpineMLType
+    b = smlBundle.Bundle()
+    b.add_experiment('libSpineML/tests/test_data/experiment0.xml')
+    assert type(b.experiments[0]) == smlExperiment.SpineMLType
 
 def test_bundle_network_parsing():
     import libSpineML
     from libSpineML import smlNetwork
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
-    c.add_network('libSpineML/tests/test_data/model.xml')
-    assert type(c.networks[0]) == smlNetwork.SpineMLType
+    b = smlBundle.Bundle()
+    b.add_network('libSpineML/tests/test_data/model.xml')
+    assert type(b.networks[0]) == smlNetwork.SpineMLType
 
 def test_bundle_component_parsing():
     import libSpineML
     from libSpineML import smlComponent
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
-    c.add_component('libSpineML/tests/test_data/LeakyIAF.xml')
-    assert type(c.components[0]) == smlComponent.SpineMLType
+    b = smlBundle.Bundle()
+    b.add_component('libSpineML/tests/test_data/LeakyIAF.xml')
+    assert type(b.components[0]) == smlComponent.SpineMLType
 
 
 
@@ -142,21 +142,21 @@ def test_bundle_smlExperiment_adding():
     import libSpineML
     from libSpineML import smlExperiment
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
+    b = smlBundle.Bundle()
     s = smlExperiment.SpineMLType()
     s.add_Experiment(smlExperiment.ExperimentType())
-    c.add_experiment(s)
-    assert type(c.experiments[0]) == type(s)
+    b.add_experiment(s)
+    assert type(b.experiments[0]) == type(s)
 
 def test_bundle_smlNetwork_adding():
     import libSpineML
     from libSpineML import smlNetwork
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
+    b = smlBundle.Bundle()
     n = smlNetwork.SpineMLType()
     n.add_Population(smlNetwork.PopulationType())
-    c.add_network(n)
-    assert type(c.networks[0]) == type(n)
+    b.add_network(n)
+    assert type(b.networks[0]) == type(n)
 
 
 def test_bundle_smlComponent_adding():
@@ -178,28 +178,59 @@ def test_bundle_smlExperiment_adding_integer():
     import pytest
     import libSpineML
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
+    b = smlBundle.Bundle()
     with pytest.raises(TypeError):
-        c.add_experiment(0)
+        b.add_experiment(0)
 
 def test_bundle_network_adding_integer():
     import pytest
     import libSpineML
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
+    b = smlBundle.Bundle()
     with pytest.raises(TypeError):
-        c.add_network(0)
+        b.add_network(0)
 
 def test_bundle_component_adding_integer():
     import pytest
     import libSpineML
     from libSpineML import smlBundle
-    c = smlBundle.Bundle()
+    b = smlBundle.Bundle()
     with pytest.raises(TypeError):
-        c.add_component(0)
+        b.add_component(0)
 
 
 
-        
+# Export Functions
+#	Export each file in each list
 
-        
+
+def test_export_single_component_function():
+    import libSpineML
+    from libSpineML import smlBundle
+    from libSpineML import smlComponent
+    b = smlBundle.Bundle()
+    b.add_component('libSpineML/tests/test_data/LeakyIAF.xml')
+    # Assuming a method export_component(path="./",index=None)
+    # Which exports the component to as export_test_component_0.xml where the number is the index
+    # Potentially this could more intelligently name the files from the hightest object
+    b.export_component('libSpineML/tests/test_data/',0)
+    b.add_component('libSpineML/tests/test_data/export_test_component_0.xml')
+    assert type(b.components[1]) == smlComponent.SpineMLType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
