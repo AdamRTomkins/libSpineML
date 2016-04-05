@@ -202,26 +202,52 @@ def test_bundle_component_adding_integer():
 
 # Export Functions
 #	Export each file in each list
+#'''
+#
+#def test_export_single_component_function():
+#    import libSpineML
+#    from libSpineML import smlBundle
+#    from libSpineML import smlComponent
+#    b = smlBundle.Bundle()
+#    b.add_component('libSpineML/tests/test_data/LeakyIAF.xml')
+#    # Assuming a method export_component(path="./",index=None)
+#    # Which exports the component to as export_test_component_0.xml where the number is the index
+#    # Potentially this could more intelligently name the files from the hightest object
+#    b.export_component('libSpineML/tests/test_data/',0)
+#    b.add_component('libSpineML/tests/test_data/export_test_component_0.xml')
+#    assert type(b.components[1]) == smlComponent.SpineMLType
+#'''
 
 
-def test_export_single_component_function():
+# Test recursive Adding
+
+# test network add component
+def test_recusive_adding_for_networks():
     import libSpineML
     from libSpineML import smlBundle
-    from libSpineML import smlComponent
+    from libSpineML import smlNetwork
     b = smlBundle.Bundle()
-    b.add_component('libSpineML/tests/test_data/LeakyIAF.xml')
-    # Assuming a method export_component(path="./",index=None)
-    # Which exports the component to as export_test_component_0.xml where the number is the index
-    # Potentially this could more intelligently name the files from the hightest object
-    b.export_component('libSpineML/tests/test_data/',0)
-    b.add_component('libSpineML/tests/test_data/export_test_component_0.xml')
-    assert type(b.components[1]) == smlComponent.SpineMLType
+    b.add_network('libSpineML/tests/test_data/model.xml',True,'libSpineML/tests/test_data/')
+    assert(len(b.components)==1)
+
+def test_not_recusive_adding_for_networks():
+    import libSpineML
+    from libSpineML import smlBundle
+    from libSpineML import smlNetwork
+    import pdb
+    b = smlBundle.Bundle()
+    b.add_network('libSpineML/tests/test_data/model.xml',False)
+    assert(len(b.components)==0)
 
 
-
-
-
-
+def test_recusive_adding_for_experiments():
+    import libSpineML
+    from libSpineML import smlBundle
+    from libSpineML import smlExperiment
+    b = smlBundle.Bundle()
+    b.add_experiment('libSpineML/tests/test_data/experiment0.xml',True)
+    assert(len(b.networks)==1)
+    assert(len(b.components)==1)
 
 
 

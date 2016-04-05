@@ -27,6 +27,14 @@ This will populate the variables with the relavant objects.
 
 Importantly, parsing returns a SpineMLType, as the highest level XML tag.
 
+### Recursive Parsing
+
+Experiment and Network level parsing allow recursive loading of linked spineML classes, for more convientient loading.
+
+```
+e = exp.parse('examples/experiment0.xml',recursive=True)
+```
+This will populate the network and component layers.
 ### SpineML exporting
 
 Our individual SpineML Classes can export XML generated through the programatic interface, using the <code>export()</code> function.
@@ -119,7 +127,7 @@ libSpineML will create a programatic way to build up declaritive SpineML models,
 
 ## API Reference
 
-In Progress
+You can read the full documentation at [ReadTheDocs}(http://libspineml.readthedocs.org/en/latest/)
 
 ## Tests
 
