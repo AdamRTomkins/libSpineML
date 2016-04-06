@@ -127,7 +127,7 @@ libSpineML will create a programatic way to build up declaritive SpineML models,
 
 ## API Reference
 
-You can read the full documentation at [ReadTheDocs}(http://libspineml.readthedocs.org/en/latest/)
+You can read the full documentation at [ReadTheDocs](http://libspineml.readthedocs.org/en/latest/)
 
 ## Tests
 
