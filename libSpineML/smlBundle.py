@@ -23,10 +23,6 @@ class Bundle(object):
     Each specification is stored a list of objects.
     """
 
-    #self.experiments = []
-    #self.networks    = []
-    #self.components  = []
-
     def __init__(self, experiments=None, networks=None, components=None):
         self.experiments = []
         self.components = []
@@ -71,7 +67,12 @@ class Bundle(object):
 
     def add_experiment(self, experiment,recursive=False):
         """Add a SpineML Experiment stored as SpineMLType types, to the bundle
-            Setting recursive=True will enable the experiment to add further subcomponents which it accesses, such as the network file and the component file.
+            Setting recursive=True will enable the experiment to add further subcomponents 
+            which it accesses, such as the network file and the component file.
+
+            Adding an experiment using the recursive option also builds an index, which
+            may provide a more organic structure             
+
         """
         if type(experiment) is smlExperiment.SpineMLType:
             self.experiments.append(experiment)
@@ -117,7 +118,8 @@ class Bundle(object):
                 # Add the linked component files if recursive is set to true
                 for n in net_obj.Population:
                     self.add_component(smlComponent.parse(path + n.Neuron.url))
-                    self.index[index]['component'] = {n.Neuron.url:self.components[-1]}
+                    if index is not None:
+                        self.index[index]['component'] = {n.Neuron.url:self.components[-1]}
 
 
         else:
