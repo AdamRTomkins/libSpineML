@@ -31,6 +31,8 @@ class Bundle(object):
         self.experiments = []
         self.components = []
         self.networks = []
+        self.index = {}
+
         if type(experiments) is not type(None):
             if type(experiments) is smlExperiment.SpineMLType:
                 self.experiments.append(experiments)
@@ -76,32 +78,48 @@ class Bundle(object):
         elif type(experiment) is str:
             exp_obj = smlExperiment.parse(experiment)
             self.experiments.append(exp_obj)
+            exp_file = os.path.basename(experiment)
+
+            # build up the experiment index
+            self.index[exp_file] = {}
+            self.index[exp_file]['experiment'] = {exp_file:exp_obj}
+            
             if recursive:
                 # Add the linked model files if recursive is set to true.
                 path = os.path.dirname(experiment) + '/'
                 for e in exp_obj.Experiment:
-                    self.add_network(path + e.Model.network_layer_url,True,path)
+                    self.add_network(path + e.Model.network_layer_url,True,path,exp_file)
 
         else:
             raise TypeError('Invalid Experiment Input: %s' % str(type(experiment)))
         
+        
 
 
 
-
-    def add_network(self, network,recursive=False,path="./"):
+    def add_network(self, network,recursive=False,path="./",index=None):
         """Add a SpineML Network stored as a SpineMLType, to the bundle
+
+            When building an index recursively, pass the experiment file name as the index
         """
         if type(network) is smlNetwork.SpineMLType:
             self.networks.append(network)
         elif type(network) is str: 
             net_obj = smlNetwork.parse(network)
             self.networks.append(net_obj)
+            net_file = os.path.basename(network)
+            
+
             if recursive:
-                print recursive
+                if index is not None:
+                    self.index[index]['network'] = {net_file:net_obj}                    
+
                 # Add the linked component files if recursive is set to true
                 for n in net_obj.Population:
                     self.add_component(smlComponent.parse(path + n.Neuron.url))
+                    self.index[index]['component'] = {n.Neuron.url:self.components[-1]}
+
+
         else:
             raise TypeError('Invalid Network Input %s' % str(type(network)))
 
