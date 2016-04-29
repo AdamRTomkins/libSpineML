@@ -77,7 +77,7 @@ class Bundle(object):
         if type(experiment) is smlExperiment.SpineMLType:
             self.experiments.append(experiment)
         elif type(experiment) is str:
-            exp_obj = smlExperiment.parse(experiment)
+            exp_obj = smlExperiment.parse(experiment,True)
             self.experiments.append(exp_obj)
             exp_file = os.path.basename(experiment)
 
@@ -87,9 +87,10 @@ class Bundle(object):
             
             if recursive:
                 # Add the linked model files if recursive is set to true.
-                path = os.path.dirname(experiment) + '/'
+                path =  os.path.dirname(experiment) + '/'
+                
                 for e in exp_obj.Experiment:
-                    self.add_network(path + e.Model.network_layer_url,True,path,exp_file)
+                    self.add_network(e.Model.network_layer_url,True,path,exp_file)
 
         else:
             raise TypeError('Invalid Experiment Input: %s' % str(type(experiment)))
@@ -103,10 +104,15 @@ class Bundle(object):
 
             When building an index recursively, pass the experiment file name as the index
         """
+        print "########################"
+        print "network is %s" % network
+        print "path is %s" % path
+        print "########################"
+
         if type(network) is smlNetwork.SpineMLType:
             self.networks.append(network)
-        elif type(network) is str: 
-            net_obj = smlNetwork.parse(network)
+        elif type(network) is str:
+            net_obj = smlNetwork.parse(network,True)
             self.networks.append(net_obj)
             net_file = os.path.basename(network)
             
@@ -117,11 +123,9 @@ class Bundle(object):
 
                 # Add the linked component files if recursive is set to true
                 for n in net_obj.Population:
-                    self.add_component(smlComponent.parse(path + n.Neuron.url))
+                    self.add_component(smlComponent.parse(path + n.Neuron.url),True)
                     if index is not None:
                         self.index[index]['component'] = {n.Neuron.url:self.components[-1]}
-
-
         else:
             raise TypeError('Invalid Network Input %s' % str(type(network)))
 
@@ -132,7 +136,7 @@ class Bundle(object):
         if type(component) is smlComponent.SpineMLType:
             self.components.append(component)
         elif type(component) is str:
-            self.components.append(smlComponent.parse(component)) 
+            self.components.append(smlComponent.parse(component),True) 
         else:
             raise TypeError('Invalid Component Input %s' % str(type(component)))
 
