@@ -123,7 +123,7 @@ class Bundle(object):
 
                 # Add the linked component files if recursive is set to true
                 for n in net_obj.Population:
-                    self.add_component(smlComponent.parse(path + n.Neuron.url),True)
+                    self.add_component(smlComponent.parse(path + n.Neuron.url,True))
                     if index is not None:
                         self.index[index]['component'] = {n.Neuron.url:self.components[-1]}
         else:
