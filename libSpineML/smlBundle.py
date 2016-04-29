@@ -86,7 +86,6 @@ class Bundle(object):
             self.index[exp_file]['experiment'] = {exp_file:exp_obj}
             
             if recursive:
-                pdb.set_trace()
                 # Add the linked model files if recursive is set to true.
                 path =  os.path.dirname(experiment) + '/'
                 if path == '/':
@@ -103,7 +102,6 @@ class Bundle(object):
 
 
     def add_network(self, network,recursive=False,index=None):
-        pdb.set_trace()
         """Add a SpineML Network stored as a SpineMLType, to the bundle
 
             When building an index recursively, pass the experiment file name as the index
