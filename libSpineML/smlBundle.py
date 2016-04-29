@@ -136,7 +136,7 @@ class Bundle(object):
         if type(component) is smlComponent.SpineMLType:
             self.components.append(component)
         elif type(component) is str:
-            self.components.append(smlComponent.parse(component),True) 
+            self.components.append(smlComponent.parse(component,True)) 
         else:
             raise TypeError('Invalid Component Input %s' % str(type(component)))
 
