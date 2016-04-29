@@ -86,11 +86,14 @@ class Bundle(object):
             self.index[exp_file]['experiment'] = {exp_file:exp_obj}
             
             if recursive:
+                pdb.set_trace()
                 # Add the linked model files if recursive is set to true.
                 path =  os.path.dirname(experiment) + '/'
+                if path == '/':
+                    path = ''
                 
                 for e in exp_obj.Experiment:
-                    self.add_network(e.Model.network_layer_url,True,path,exp_file)
+                    self.add_network(path+e.Model.network_layer_url,True,exp_file)
 
         else:
             raise TypeError('Invalid Experiment Input: %s' % str(type(experiment)))
@@ -99,23 +102,23 @@ class Bundle(object):
 
 
 
-    def add_network(self, network,recursive=False,path="./",index=None):
+    def add_network(self, network,recursive=False,index=None):
+        pdb.set_trace()
         """Add a SpineML Network stored as a SpineMLType, to the bundle
 
             When building an index recursively, pass the experiment file name as the index
         """
-        print "########################"
-        print "network is %s" % network
-        print "path is %s" % path
-        print "########################"
 
         if type(network) is smlNetwork.SpineMLType:
             self.networks.append(network)
         elif type(network) is str:
+            net_file = os.path.basename(network)
+            path =  os.path.dirname(network) + '/'
+            if path == '/':
+                    path = ''
+
             net_obj = smlNetwork.parse(network,True)
             self.networks.append(net_obj)
-            net_file = os.path.basename(network)
-            
 
             if recursive:
                 if index is not None:

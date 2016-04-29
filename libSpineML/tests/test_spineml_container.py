@@ -227,7 +227,7 @@ def test_recusive_adding_for_networks():
     from libSpineML import smlBundle
     from libSpineML import smlNetwork
     b = smlBundle.Bundle()
-    b.add_network('libSpineML/tests/test_data/model.xml',True,'libSpineML/tests/test_data/')
+    b.add_network('libSpineML/tests/test_data/model.xml',True)
     assert(len(b.components)==1)
 
 def test_not_recusive_adding_for_networks():
