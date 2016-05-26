@@ -668,7 +668,7 @@ class SpineMLType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='SpineMLType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='SpineMLType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -681,14 +681,14 @@ class SpineMLType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='SpineMLType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='SpineMLType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='SpineMLType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='SpineMLType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='SpineMLType'):
         pass
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='SpineMLType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='SpineMLType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -769,7 +769,7 @@ class ExperimentType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ExperimentType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ExperimentType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -782,19 +782,19 @@ class ExperimentType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ExperimentType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ExperimentType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ExperimentType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ExperimentType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ExperimentType'):
         if self.name is not None and 'name' not in already_processed:
             already_processed.add('name')
             outfile.write(' name=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.name), input_name='name')), ))
         if self.description is not None and 'description' not in already_processed:
             already_processed.add('description')
             outfile.write(' description=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.description), input_name='description')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ExperimentType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ExperimentType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -934,7 +934,7 @@ class ModelType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ModelType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ModelType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -947,16 +947,16 @@ class ModelType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ModelType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ModelType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ModelType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ModelType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ModelType'):
         if self.network_layer_url is not None and 'network_layer_url' not in already_processed:
             already_processed.add('network_layer_url')
             outfile.write(' network_layer_url=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.network_layer_url), input_name='network_layer_url')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ModelType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ModelType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1023,7 +1023,7 @@ class SimulationType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='SimulationType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='SimulationType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1036,19 +1036,19 @@ class SimulationType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='SimulationType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='SimulationType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='SimulationType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='SimulationType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='SimulationType'):
         if self.preferred_simulator is not None and 'preferred_simulator' not in already_processed:
             already_processed.add('preferred_simulator')
             outfile.write(' preferred_simulator=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.preferred_simulator), input_name='preferred_simulator')), ))
         if self.duration is not None and 'duration' not in already_processed:
             already_processed.add('duration')
             outfile.write(' duration="%s"' % self.gds_format_double(self.duration, input_name='duration'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='SimulationType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='SimulationType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1123,7 +1123,7 @@ class AbstractIntegrationMethodType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AbstractIntegrationMethodType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AbstractIntegrationMethodType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1136,11 +1136,11 @@ class AbstractIntegrationMethodType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractIntegrationMethodType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AbstractIntegrationMethodType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AbstractIntegrationMethodType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AbstractIntegrationMethodType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AbstractIntegrationMethodType'):
         if self.dt is not None and 'dt' not in already_processed:
             already_processed.add('dt')
             outfile.write(' dt=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.dt), input_name='dt')), ))
@@ -1148,7 +1148,7 @@ class AbstractIntegrationMethodType(GeneratedsSuper):
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AbstractIntegrationMethodType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AbstractIntegrationMethodType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -1195,7 +1195,7 @@ class EulerIntegrationType(AbstractIntegrationMethodType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='EulerIntegrationType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='EulerIntegrationType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1208,13 +1208,13 @@ class EulerIntegrationType(AbstractIntegrationMethodType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='EulerIntegrationType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='EulerIntegrationType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='EulerIntegrationType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='EulerIntegrationType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='EulerIntegrationType'):
         super(EulerIntegrationType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='EulerIntegrationType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='EulerIntegrationType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='EulerIntegrationType', fromsubclass_=False, pretty_print=True):
         super(EulerIntegrationType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -1264,7 +1264,7 @@ class RungeKuttaIntegrationType(AbstractIntegrationMethodType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='RungeKuttaIntegrationType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='RungeKuttaIntegrationType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1277,16 +1277,16 @@ class RungeKuttaIntegrationType(AbstractIntegrationMethodType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='RungeKuttaIntegrationType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='RungeKuttaIntegrationType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='RungeKuttaIntegrationType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='RungeKuttaIntegrationType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='RungeKuttaIntegrationType'):
         super(RungeKuttaIntegrationType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='RungeKuttaIntegrationType')
         if self.order is not None and 'order' not in already_processed:
             already_processed.add('order')
             outfile.write(' order=%s' % (quote_attrib(self.order), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='RungeKuttaIntegrationType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='RungeKuttaIntegrationType', fromsubclass_=False, pretty_print=True):
         super(RungeKuttaIntegrationType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -1341,7 +1341,7 @@ class LesionType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='LesionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='LesionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1354,18 +1354,18 @@ class LesionType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='LesionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='LesionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='LesionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='LesionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='LesionType'):
         if self.src_population is not None and 'src_population' not in already_processed:
             already_processed.add('src_population')
             outfile.write(' src_population=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.src_population), input_name='src_population')), ))
         if self.dst_population is not None and 'dst_population' not in already_processed:
             already_processed.add('dst_population')
             outfile.write(' dst_population=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.dst_population), input_name='dst_population')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='LesionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='LesionType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -1423,7 +1423,7 @@ class ConfigurationType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ConfigurationType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer" xmlns:UL="http://www.shef.ac.uk/SpineMLNetworkLayer" ', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ConfigurationType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer" xmlns:UL="http://www.shef.ac.uk/SpineMLNetworkLayer" ', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1436,16 +1436,16 @@ class ConfigurationType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ConfigurationType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ConfigurationType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ConfigurationType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ConfigurationType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ConfigurationType'):
         if self.target is not None and 'target' not in already_processed:
             already_processed.add('target')
             outfile.write(' target=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.target), input_name='target')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ConfigurationType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ConfigurationType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1539,7 +1539,7 @@ class AbstractInputType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AbstractInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AbstractInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1552,11 +1552,11 @@ class AbstractInputType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AbstractInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AbstractInputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AbstractInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AbstractInputType'):
         if self.name is not None and 'name' not in already_processed:
             already_processed.add('name')
             outfile.write(' name=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.name), input_name='name')), ))
@@ -1582,7 +1582,7 @@ class AbstractInputType(GeneratedsSuper):
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AbstractInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AbstractInputType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -1671,7 +1671,7 @@ class TimeVaryingInputType(AbstractInputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='TimeVaryingInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='TimeVaryingInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1684,14 +1684,14 @@ class TimeVaryingInputType(AbstractInputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='TimeVaryingInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='TimeVaryingInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='TimeVaryingInputType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='TimeVaryingInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='TimeVaryingInputType'):
         super(TimeVaryingInputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='TimeVaryingInputType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='TimeVaryingInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='TimeVaryingInputType', fromsubclass_=False, pretty_print=True):
         super(TimeVaryingInputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -1755,7 +1755,7 @@ class TimeVaryingArrayInputType(AbstractInputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='TimeVaryingArrayInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='TimeVaryingArrayInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1768,17 +1768,17 @@ class TimeVaryingArrayInputType(AbstractInputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='TimeVaryingArrayInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='TimeVaryingArrayInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='TimeVaryingArrayInputType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='TimeVaryingArrayInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='TimeVaryingArrayInputType'):
         super(TimeVaryingArrayInputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='TimeVaryingArrayInputType')
         if self.array_size is not None and 'array_size' not in already_processed:
             already_processed.add('array_size')
             outfile.write(' array_size="%s"' % self.gds_format_integer(self.array_size, input_name='array_size'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='TimeVaryingArrayInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='TimeVaryingArrayInputType', fromsubclass_=False, pretty_print=True):
         super(TimeVaryingArrayInputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -1839,7 +1839,7 @@ class ConstantInputType(AbstractInputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ConstantInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ConstantInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1852,16 +1852,16 @@ class ConstantInputType(AbstractInputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ConstantInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ConstantInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ConstantInputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ConstantInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ConstantInputType'):
         super(ConstantInputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ConstantInputType')
         if self.value is not None and 'value' not in already_processed:
             already_processed.add('value')
             outfile.write(' value="%s"' % self.gds_format_double(self.value, input_name='value'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ConstantInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ConstantInputType', fromsubclass_=False, pretty_print=True):
         super(ConstantInputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -1923,7 +1923,7 @@ class ConstantArrayInputType(AbstractInputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ConstantArrayInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ConstantArrayInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1936,11 +1936,11 @@ class ConstantArrayInputType(AbstractInputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ConstantArrayInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ConstantArrayInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ConstantArrayInputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ConstantArrayInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ConstantArrayInputType'):
         super(ConstantArrayInputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ConstantArrayInputType')
         if self.array_value is not None and 'array_value' not in already_processed:
             already_processed.add('array_value')
@@ -1948,7 +1948,7 @@ class ConstantArrayInputType(AbstractInputType):
         if self.array_size is not None and 'array_size' not in already_processed:
             already_processed.add('array_size')
             outfile.write(' array_size="%s"' % self.gds_format_integer(self.array_size, input_name='array_size'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ConstantArrayInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ConstantArrayInputType', fromsubclass_=False, pretty_print=True):
         super(ConstantArrayInputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -2002,7 +2002,7 @@ class ExternalInputType(AbstractInputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ExternalInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ExternalInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2015,13 +2015,13 @@ class ExternalInputType(AbstractInputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ExternalInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ExternalInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ExternalInputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ExternalInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ExternalInputType'):
         super(ExternalInputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ExternalInputType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ExternalInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ExternalInputType', fromsubclass_=False, pretty_print=True):
         super(ExternalInputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -2066,7 +2066,7 @@ class ExternalArrayInputType(AbstractInputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ExternalArrayInputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ExternalArrayInputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2079,16 +2079,16 @@ class ExternalArrayInputType(AbstractInputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ExternalArrayInputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ExternalArrayInputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ExternalArrayInputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ExternalArrayInputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ExternalArrayInputType'):
         super(ExternalArrayInputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ExternalArrayInputType')
         if self.array_size is not None and 'array_size' not in already_processed:
             already_processed.add('array_size')
             outfile.write(' array_size="%s"' % self.gds_format_integer(self.array_size, input_name='array_size'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ExternalArrayInputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ExternalArrayInputType', fromsubclass_=False, pretty_print=True):
         super(ExternalArrayInputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -2142,7 +2142,7 @@ class TimePointValueType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='TimePointValueType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='TimePointValueType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2155,18 +2155,18 @@ class TimePointValueType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='TimePointValueType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='TimePointValueType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='TimePointValueType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='TimePointValueType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='TimePointValueType'):
         if self.time is not None and 'time' not in already_processed:
             already_processed.add('time')
             outfile.write(' time="%s"' % self.gds_format_double(self.time, input_name='time'))
         if self.value is not None and 'value' not in already_processed:
             already_processed.add('value')
             outfile.write(' value="%s"' % self.gds_format_double(self.value, input_name='value'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='TimePointValueType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='TimePointValueType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -2234,7 +2234,7 @@ class TimePointArrayValueType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='TimePointArrayValueType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='TimePointArrayValueType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2247,11 +2247,11 @@ class TimePointArrayValueType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='TimePointArrayValueType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='TimePointArrayValueType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='TimePointArrayValueType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='TimePointArrayValueType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='TimePointArrayValueType'):
         if self.index is not None and 'index' not in already_processed:
             already_processed.add('index')
             outfile.write(' index="%s"' % self.gds_format_integer(self.index, input_name='index'))
@@ -2261,7 +2261,7 @@ class TimePointArrayValueType(GeneratedsSuper):
         if self.array_value is not None and 'array_value' not in already_processed:
             already_processed.add('array_value')
             outfile.write(' array_value=%s' % (quote_attrib(self.array_value), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='TimePointArrayValueType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='TimePointArrayValueType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -2344,7 +2344,7 @@ class AbstractOutputType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AbstractOutputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AbstractOutputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2357,11 +2357,11 @@ class AbstractOutputType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractOutputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AbstractOutputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AbstractOutputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AbstractOutputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AbstractOutputType'):
         if self.name is not None and 'name' not in already_processed:
             already_processed.add('name')
             outfile.write(' name=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.name), input_name='name')), ))
@@ -2384,7 +2384,7 @@ class AbstractOutputType(GeneratedsSuper):
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AbstractOutputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AbstractOutputType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -2458,7 +2458,7 @@ class LogOutputType(AbstractOutputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='LogOutputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='LogOutputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2471,13 +2471,13 @@ class LogOutputType(AbstractOutputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='LogOutputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='LogOutputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='LogOutputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='LogOutputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='LogOutputType'):
         super(LogOutputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='LogOutputType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='LogOutputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='LogOutputType', fromsubclass_=False, pretty_print=True):
         super(LogOutputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -2519,7 +2519,7 @@ class ExternalOutputType(AbstractOutputType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ExternalOutputType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ExternalOutputType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2532,13 +2532,13 @@ class ExternalOutputType(AbstractOutputType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ExternalOutputType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ExternalOutputType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ExternalOutputType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ExternalOutputType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ExternalOutputType'):
         super(ExternalOutputType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ExternalOutputType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ExternalOutputType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ExternalOutputType', fromsubclass_=False, pretty_print=True):
         super(ExternalOutputType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -2597,7 +2597,7 @@ class ComponentType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ComponentType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ComponentType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2610,12 +2610,12 @@ class ComponentType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ComponentType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ComponentType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ComponentType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ComponentType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ComponentType'):
         if self.name is not None and 'name' not in already_processed:
             already_processed.add('name')
             outfile.write(' name=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.name), input_name='name')), ))
@@ -2626,7 +2626,7 @@ class ComponentType(GeneratedsSuper):
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ComponentType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ComponentType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2693,7 +2693,7 @@ class GroupType(ComponentType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='GroupType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='GroupType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2706,17 +2706,17 @@ class GroupType(ComponentType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='GroupType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='GroupType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='GroupType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='GroupType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='GroupType'):
         super(GroupType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='GroupType')
         if self.size is not None and 'size' not in already_processed:
             already_processed.add('size')
             outfile.write(' size="%s"' % self.gds_format_integer(self.size, input_name='size'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='GroupType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='GroupType', fromsubclass_=False, pretty_print=True):
         super(GroupType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -2786,7 +2786,7 @@ class PropertyType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='PropertyType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='PropertyType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2799,19 +2799,19 @@ class PropertyType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='PropertyType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='PropertyType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='PropertyType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='PropertyType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='PropertyType'):
         if self.name is not None and 'name' not in already_processed:
             already_processed.add('name')
             outfile.write(' name=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.name), input_name='name')), ))
         if self.dimension is not None and 'dimension' not in already_processed:
             already_processed.add('dimension')
             outfile.write(' dimension=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.dimension), input_name='dimension')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='PropertyType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='PropertyType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2903,7 +2903,7 @@ class AbstractValueType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AbstractValueType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AbstractValueType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2916,17 +2916,17 @@ class AbstractValueType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractValueType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AbstractValueType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AbstractValueType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AbstractValueType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AbstractValueType'):
         if self.extensiontype_ is not None and 'xsi:type' not in already_processed:
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
         pass
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AbstractValueType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AbstractValueType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -2972,7 +2972,7 @@ class FixedValueType(AbstractValueType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='FixedValueType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='FixedValueType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2985,16 +2985,16 @@ class FixedValueType(AbstractValueType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='FixedValueType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='FixedValueType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='FixedValueType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='FixedValueType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='FixedValueType'):
         super(FixedValueType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='FixedValueType')
         if self.value is not None and 'value' not in already_processed:
             already_processed.add('value')
             outfile.write(' value="%s"' % self.gds_format_double(self.value, input_name='value'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='FixedValueType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='FixedValueType', fromsubclass_=False, pretty_print=True):
         super(FixedValueType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -3053,7 +3053,7 @@ class ValueListType(AbstractValueType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ValueListType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ValueListType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3066,14 +3066,14 @@ class ValueListType(AbstractValueType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ValueListType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ValueListType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ValueListType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ValueListType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ValueListType'):
         super(ValueListType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ValueListType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ValueListType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ValueListType', fromsubclass_=False, pretty_print=True):
         super(ValueListType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -3129,7 +3129,7 @@ class ValueType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ValueType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ValueType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3142,18 +3142,18 @@ class ValueType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ValueType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ValueType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ValueType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ValueType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ValueType'):
         if self.index is not None and 'index' not in already_processed:
             already_processed.add('index')
             outfile.write(' index="%s"' % self.gds_format_integer(self.index, input_name='index'))
         if self.value is not None and 'value' not in already_processed:
             already_processed.add('value')
             outfile.write(' value="%s"' % self.gds_format_double(self.value, input_name='value'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ValueType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ValueType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -3212,7 +3212,7 @@ class AbstractDistributionType(AbstractValueType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AbstractDistributionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AbstractDistributionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3225,11 +3225,11 @@ class AbstractDistributionType(AbstractValueType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractDistributionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AbstractDistributionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AbstractDistributionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AbstractDistributionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AbstractDistributionType'):
         super(AbstractDistributionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractDistributionType')
         if self.seed is not None and 'seed' not in already_processed:
             already_processed.add('seed')
@@ -3238,7 +3238,7 @@ class AbstractDistributionType(AbstractValueType):
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AbstractDistributionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AbstractDistributionType', fromsubclass_=False, pretty_print=True):
         super(AbstractDistributionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -3297,7 +3297,7 @@ class UniformDistributionType(AbstractDistributionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='UniformDistributionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='UniformDistributionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3310,11 +3310,11 @@ class UniformDistributionType(AbstractDistributionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='UniformDistributionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='UniformDistributionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='UniformDistributionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='UniformDistributionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='UniformDistributionType'):
         super(UniformDistributionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='UniformDistributionType')
         if self.minimum is not None and 'minimum' not in already_processed:
             already_processed.add('minimum')
@@ -3322,7 +3322,7 @@ class UniformDistributionType(AbstractDistributionType):
         if self.maximum is not None and 'maximum' not in already_processed:
             already_processed.add('maximum')
             outfile.write(' maximum="%s"' % self.gds_format_double(self.maximum, input_name='maximum'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='UniformDistributionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='UniformDistributionType', fromsubclass_=False, pretty_print=True):
         super(UniformDistributionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -3384,7 +3384,7 @@ class NormalDistributionType(AbstractDistributionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='NormalDistributionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='NormalDistributionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3397,11 +3397,11 @@ class NormalDistributionType(AbstractDistributionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='NormalDistributionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='NormalDistributionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='NormalDistributionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='NormalDistributionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='NormalDistributionType'):
         super(NormalDistributionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='NormalDistributionType')
         if self.mean is not None and 'mean' not in already_processed:
             already_processed.add('mean')
@@ -3409,7 +3409,7 @@ class NormalDistributionType(AbstractDistributionType):
         if self.variance is not None and 'variance' not in already_processed:
             already_processed.add('variance')
             outfile.write(' variance="%s"' % self.gds_format_double(self.variance, input_name='variance'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='NormalDistributionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='NormalDistributionType', fromsubclass_=False, pretty_print=True):
         super(NormalDistributionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -3468,7 +3468,7 @@ class PoissonDistributionType(AbstractDistributionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='PoissonDistributionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='PoissonDistributionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3481,16 +3481,16 @@ class PoissonDistributionType(AbstractDistributionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='PoissonDistributionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='PoissonDistributionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='PoissonDistributionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='PoissonDistributionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='PoissonDistributionType'):
         super(PoissonDistributionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='PoissonDistributionType')
         if self.mean is not None and 'mean' not in already_processed:
             already_processed.add('mean')
             outfile.write(' mean="%s"' % self.gds_format_double(self.mean, input_name='mean'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='PoissonDistributionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='PoissonDistributionType', fromsubclass_=False, pretty_print=True):
         super(PoissonDistributionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         pass
     def build(self, node):
@@ -3541,7 +3541,7 @@ class AbstractConnectionType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AbstractConnectionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AbstractConnectionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3554,17 +3554,17 @@ class AbstractConnectionType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AbstractConnectionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AbstractConnectionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AbstractConnectionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AbstractConnectionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AbstractConnectionType'):
         if self.extensiontype_ is not None and 'xsi:type' not in already_processed:
             already_processed.add('xsi:type')
             outfile.write(' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
             outfile.write(' xsi:type="%s"' % self.extensiontype_)
         pass
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AbstractConnectionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AbstractConnectionType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -3621,7 +3621,7 @@ class ConnectionListType(AbstractConnectionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ConnectionListType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ConnectionListType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3634,14 +3634,14 @@ class ConnectionListType(AbstractConnectionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ConnectionListType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ConnectionListType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ConnectionListType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ConnectionListType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ConnectionListType'):
         super(ConnectionListType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='ConnectionListType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ConnectionListType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ConnectionListType', fromsubclass_=False, pretty_print=True):
         super(ConnectionListType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -3703,7 +3703,7 @@ class OneToOneConnectionType(AbstractConnectionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='OneToOneConnectionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='OneToOneConnectionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3716,14 +3716,14 @@ class OneToOneConnectionType(AbstractConnectionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='OneToOneConnectionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='OneToOneConnectionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='OneToOneConnectionType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='OneToOneConnectionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='OneToOneConnectionType'):
         super(OneToOneConnectionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='OneToOneConnectionType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='OneToOneConnectionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='OneToOneConnectionType', fromsubclass_=False, pretty_print=True):
         super(OneToOneConnectionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -3778,7 +3778,7 @@ class AllToAllConnectionType(AbstractConnectionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AllToAllConnectionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='AllToAllConnectionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3791,14 +3791,14 @@ class AllToAllConnectionType(AbstractConnectionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='AllToAllConnectionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='AllToAllConnectionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='AllToAllConnectionType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='AllToAllConnectionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='AllToAllConnectionType'):
         super(AllToAllConnectionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='AllToAllConnectionType')
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='AllToAllConnectionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='AllToAllConnectionType', fromsubclass_=False, pretty_print=True):
         super(AllToAllConnectionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -3859,7 +3859,7 @@ class FixedProbabilityConnectionType(AbstractConnectionType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='FixedProbabilityConnectionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='FixedProbabilityConnectionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3872,12 +3872,12 @@ class FixedProbabilityConnectionType(AbstractConnectionType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='FixedProbabilityConnectionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='FixedProbabilityConnectionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='FixedProbabilityConnectionType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='FixedProbabilityConnectionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='FixedProbabilityConnectionType'):
         super(FixedProbabilityConnectionType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='FixedProbabilityConnectionType')
         if self.probability is not None and 'probability' not in already_processed:
             already_processed.add('probability')
@@ -3885,7 +3885,7 @@ class FixedProbabilityConnectionType(AbstractConnectionType):
         if self.seed is not None and 'seed' not in already_processed:
             already_processed.add('seed')
             outfile.write(' seed="%s"' % self.gds_format_integer(self.seed, input_name='seed'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='FixedProbabilityConnectionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='FixedProbabilityConnectionType', fromsubclass_=False, pretty_print=True):
         super(FixedProbabilityConnectionType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
         if pretty_print:
             eol_ = '\n'
@@ -3958,7 +3958,7 @@ class ConnectionType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ConnectionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ConnectionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -3971,11 +3971,11 @@ class ConnectionType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ConnectionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ConnectionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ConnectionType', pretty_print=pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ConnectionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ConnectionType'):
         if self.src_neuron is not None and 'src_neuron' not in already_processed:
             already_processed.add('src_neuron')
             outfile.write(' src_neuron="%s"' % self.gds_format_integer(self.src_neuron, input_name='src_neuron'))
@@ -3985,7 +3985,7 @@ class ConnectionType(GeneratedsSuper):
         if self.delay is not None and 'delay' not in already_processed:
             already_processed.add('delay')
             outfile.write(' delay="%s"' % self.gds_format_double(self.delay, input_name='delay'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ConnectionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ConnectionType', fromsubclass_=False, pretty_print=True):
         pass
     def build(self, node):
         already_processed = set()
@@ -4054,7 +4054,7 @@ class DelayType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='DelayType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='DelayType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4067,16 +4067,16 @@ class DelayType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='DelayType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='DelayType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='DelayType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='DelayType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='DelayType'):
         if self.dimension is not None and 'dimension' not in already_processed:
             already_processed.add('dimension')
             outfile.write(' dimension=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.dimension), input_name='dimension')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='DelayType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='DelayType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4167,7 +4167,7 @@ class PopulationType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='PopulationType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='PopulationType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4180,14 +4180,14 @@ class PopulationType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='PopulationType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='PopulationType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='PopulationType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='PopulationType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='PopulationType'):
         pass
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='PopulationType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='PopulationType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4253,7 +4253,7 @@ class NeuronType(ComponentType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='NeuronType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='NeuronType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4266,17 +4266,17 @@ class NeuronType(ComponentType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='NeuronType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='NeuronType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='NeuronType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='NeuronType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='NeuronType'):
         super(NeuronType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='NeuronType')
         if self.size is not None and 'size' not in already_processed:
             already_processed.add('size')
             outfile.write(' size="%s"' % self.gds_format_integer(self.size, input_name='size'))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='NeuronType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='NeuronType', fromsubclass_=False, pretty_print=True):
         super(NeuronType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
     def build(self, node):
         already_processed = set()
@@ -4335,7 +4335,7 @@ class ProjectionType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ProjectionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ProjectionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4348,16 +4348,16 @@ class ProjectionType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='ProjectionType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='ProjectionType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='ProjectionType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='ProjectionType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='ProjectionType'):
         if self.dst_population is not None and 'dst_population' not in already_processed:
             already_processed.add('dst_population')
             outfile.write(' dst_population=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.dst_population), input_name='dst_population')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='ProjectionType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='ProjectionType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4419,7 +4419,7 @@ class SynapseType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='SynapseType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='SynapseType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4432,14 +4432,14 @@ class SynapseType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='SynapseType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='SynapseType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='SynapseType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='SynapseType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='SynapseType'):
         pass
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='SynapseType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='SynapseType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4535,7 +4535,7 @@ class WeightUpdateType(ComponentType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='WeightUpdateType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='WeightUpdateType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4548,12 +4548,12 @@ class WeightUpdateType(ComponentType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='WeightUpdateType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='WeightUpdateType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='WeightUpdateType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='WeightUpdateType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='WeightUpdateType'):
         super(WeightUpdateType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='WeightUpdateType')
         if self.input_src_port is not None and 'input_src_port' not in already_processed:
             already_processed.add('input_src_port')
@@ -4567,7 +4567,7 @@ class WeightUpdateType(ComponentType):
         if self.feedback_dst_port is not None and 'feedback_dst_port' not in already_processed:
             already_processed.add('feedback_dst_port')
             outfile.write(' feedback_dst_port=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.feedback_dst_port), input_name='feedback_dst_port')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='WeightUpdateType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='WeightUpdateType', fromsubclass_=False, pretty_print=True):
         super(WeightUpdateType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
     def build(self, node):
         already_processed = set()
@@ -4636,7 +4636,7 @@ class PostSynapseType(ComponentType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='PostSynapseType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='PostSynapseType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4649,12 +4649,12 @@ class PostSynapseType(ComponentType):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='PostSynapseType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='PostSynapseType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='PostSynapseType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='PostSynapseType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='PostSynapseType'):
         super(PostSynapseType, self).exportAttributes(outfile, level, already_processed, namespace_, name_='PostSynapseType')
         if self.input_src_port is not None and 'input_src_port' not in already_processed:
             already_processed.add('input_src_port')
@@ -4668,7 +4668,7 @@ class PostSynapseType(ComponentType):
         if self.output_dst_port is not None and 'output_dst_port' not in already_processed:
             already_processed.add('output_dst_port')
             outfile.write(' output_dst_port=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.output_dst_port), input_name='output_dst_port')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='PostSynapseType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='PostSynapseType', fromsubclass_=False, pretty_print=True):
         super(PostSynapseType, self).exportChildren(outfile, level, namespace_, name_, True, pretty_print=pretty_print)
     def build(self, node):
         already_processed = set()
@@ -4730,7 +4730,7 @@ class LayoutType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='LayoutType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='LayoutType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4743,16 +4743,16 @@ class LayoutType(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='LayoutType')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='NML:', name_='LayoutType', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='', name_='LayoutType', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
             outfile.write('/>%s' % (eol_, ))
-    def exportAttributes(self, outfile, level, already_processed, namespace_='NML:', name_='LayoutType'):
+    def exportAttributes(self, outfile, level, already_processed, namespace_='', name_='LayoutType'):
         if self.url is not None and 'url' not in already_processed:
             already_processed.add('url')
             outfile.write(' url=%s' % (self.gds_encode(self.gds_format_string(quote_attrib(self.url), input_name='url')), ))
-    def exportChildren(self, outfile, level, namespace_='NML:', name_='LayoutType', fromsubclass_=False, pretty_print=True):
+    def exportChildren(self, outfile, level, namespace_='', name_='LayoutType', fromsubclass_=False, pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -4861,7 +4861,7 @@ def parse(inFileName, silence=False):
         sys.stdout.write('<?xml version="1.0" ?>\n')
         rootObj.export(
             sys.stdout, 0, name_=rootTag,
-            namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"',
+            namespacedef_='',
             pretty_print=True)
     return rootObj
 
@@ -4907,7 +4907,7 @@ def parseString(inString, silence=False):
         sys.stdout.write('<?xml version="1.0" ?>\n')
         rootObj.export(
             sys.stdout, 0, name_=rootTag,
-            namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLExperimentLayer"')
+            namespacedef_='')
     return rootObj
 
 

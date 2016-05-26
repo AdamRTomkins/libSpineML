@@ -662,7 +662,7 @@ class PortType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='PortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='PortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -730,7 +730,7 @@ class SpineMLType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='SpineMLType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='SpineMLType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -807,7 +807,7 @@ class ParameterType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ParameterType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='ParameterType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -886,7 +886,7 @@ class StateVariableType(ParameterType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='StateVariableType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='StateVariableType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -951,7 +951,7 @@ class AliasType(ParameterType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AliasType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='AliasType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1025,7 +1025,7 @@ class AnalogSendPortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AnalogSendPortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='AnalogSendPortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1099,7 +1099,7 @@ class AnalogReceivePortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AnalogReceivePortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='AnalogReceivePortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1195,7 +1195,7 @@ class AnalogReducePortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='AnalogReducePortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='AnalogReducePortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1281,7 +1281,7 @@ class EventSendPortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='EventSendPortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='EventSendPortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1352,7 +1352,7 @@ class EventReceivePortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='EventReceivePortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='EventReceivePortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1423,7 +1423,7 @@ class ImpulseSendPortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ImpulseSendPortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='ImpulseSendPortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1497,7 +1497,7 @@ class ImpulseReceivePortType(PortType):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ImpulseReceivePortType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='ImpulseReceivePortType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1612,7 +1612,7 @@ class ComponentClassType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ComponentClassType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='ComponentClassType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1776,7 +1776,7 @@ class DynamicsType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='DynamicsType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='DynamicsType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -1905,7 +1905,7 @@ class RegimeType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='RegimeType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='RegimeType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2005,7 +2005,7 @@ class TimeDerivativeType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='TimeDerivativeType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='TimeDerivativeType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2114,7 +2114,7 @@ class OnConditionType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='OnConditionType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='OnConditionType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2243,7 +2243,7 @@ class OnEventType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='OnEventType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='OnEventType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2372,7 +2372,7 @@ class OnImpulseType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='OnImpulseType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='OnImpulseType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2472,7 +2472,7 @@ class StateAssignmentType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='StateAssignmentType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='StateAssignmentType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2548,7 +2548,7 @@ class EventOutType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='EventOutType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='EventOutType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2614,7 +2614,7 @@ class ImpulseOutType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='ImpulseOutType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='ImpulseOutType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2680,7 +2680,7 @@ class TriggerType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='NML:', name_='TriggerType', namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"', pretty_print=True):
+    def export(self, outfile, level, namespace_='NML:', name_='TriggerType', namespacedef_='', pretty_print=True):
         if pretty_print:
             eol_ = '\n'
         else:
@@ -2786,7 +2786,7 @@ def parse(inFileName, silence=False):
         sys.stdout.write('<?xml version="1.0" ?>\n')
         rootObj.export(
             sys.stdout, 0, name_=rootTag,
-            namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"',
+            namespacedef_='',
             pretty_print=True)
     return rootObj
 
@@ -2832,7 +2832,7 @@ def parseString(inString, silence=False):
         sys.stdout.write('<?xml version="1.0" ?>\n')
         rootObj.export(
             sys.stdout, 0, name_=rootTag,
-            namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"')
+            namespacedef_='')
     return rootObj
 
 

@@ -2,7 +2,7 @@ from distutils.core import setup
 import setuptools
  
 setup(name = "libSpineML",
-      version = "0.2",
+      version = "0.3",
       description = "Python bindings for the SpineML specifications",
       author = "Adam Tomkins",
       author_email = "a.tomkins@sheffield.ac.uk",

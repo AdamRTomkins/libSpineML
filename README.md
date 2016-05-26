@@ -150,7 +150,17 @@ GNU General Public License 3.0
 
 generate base files using generateDS, in combination with the schema files you can find on the [SpineML site](http://bimpa.group.shef.ac.uk/SpineML/index.php/Documentation) 
 
-python generateDS.py -o experiment.py  SpineMLExperimentLayer.xsd 
-python generateDS.py -o network.py  SpineMLNetworkLayer.xsd 
-python generateDS.py -o component.py  SpineMLComponentLayer.xsd
+python generateDS.py -o smlExperiment.py  SpineMLExperimentLayer.xsd
+
+python generateDS.py -o smlNetwork.py  SpineMLNetworkLayer.xsd 
+
+python generateDS.py -o smlComponent.py  SpineMLComponentLayer.xsd
+
+Further modifications are nessisary to create re-importable XML from the export.
+such as in the component replacing:
+  namespacedef_='xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer"'
+with
+  namespacedef_=''
+
+Futher modifications are needed to remove unwanted name space declarations such as NML: and LL: on every item.
 
