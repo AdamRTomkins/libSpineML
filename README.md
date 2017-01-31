@@ -14,9 +14,9 @@ This project provides python bindings for the SpineML schema, which can be found
 Parsing an existing SpineML specification is easy to accumplish, by providing the path to the schema-specific XML file.
 
 ```
-import experiment as exp
-import network as net
-import component as com
+from libSpineML import smlExperiment as exp
+from libSpineML import smlNetwork as net
+from libSpineML import smlComponent as com
 
 c = com.parse('Examples/LeakyIAF.xml')
 n = net.parse('Examples/model.xml')
@@ -41,7 +41,7 @@ Our individual SpineML Classes can export XML generated through the programatic 
 
 ```
 import sys
-from libSpineML import experiment
+from libSpineML import smlExperiment as experiment
 x = experiment.SpineMLType()
 x.add_Experiment(experiment.ExperimentType())
 x.export(sys.stdout,0)
