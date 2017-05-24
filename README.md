@@ -83,19 +83,19 @@ sa = com.StateAssignmentType('V','Vr')
 tr = com.TriggerType('V > Vt')
 eo = com.EventOutType('spike')
 # Create the On Condition
-con = com.OnConditionType('integrating',sa,eo,None,tr)
+con = com.OnConditionType('integrating',[sa],[eo],None,tr)
 ```
 
 With these we can create a regime:
 
 ```
-reg = com.RegimeType('integrating',td,con)
+reg = com.RegimeType('integrating',[td],[con])
 ```
 
 and feed this into the dynamics:
 
 ```
-dyn = com.DynamicsType('integrating',reg)
+dyn = com.DynamicsType('integrating',[reg])
 ```
 
 Here we have to specify the state variables
