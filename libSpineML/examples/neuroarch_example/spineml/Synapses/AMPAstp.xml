@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLComponentLayer SpineMLComponentLayer.xsd" xmlns="http://www.shef.ac.uk/SpineMLComponentLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <ComponentClass type="postsynapse" name="AMPAstp">
+  <Dynamics initial_regime="integrating">
+   <Regime name="integrating">
+    <TimeDerivative variable="D">
+     <MathInline>((1-D)/tD) -D * (1-pv) * w</MathInline>
+    </TimeDerivative>
+   </Regime>
+   <StateVariable dimension="?" name="D"/>
+  </Dynamics>
+  <AnalogSendPort name="D"/>
+  <ImpulseReceivePort dimension="?" name="w"/>
+  <Parameter dimension="?" name="tD"/>
+  <Parameter dimension="?" name="pv"/>
+ </ComponentClass>
+</SpineML>

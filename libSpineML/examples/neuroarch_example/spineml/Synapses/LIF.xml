@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLComponentLayer SpineMLComponentLayer.xsd" xmlns="http://www.shef.ac.uk/SpineMLComponentLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <ComponentClass type="neuron_body" name="LIF">
+  <Dynamics initial_regime="integrating">
+   <Regime name="integrating">
+    <TimeDerivative variable="v">
+     <MathInline>((I_Syn) / Cm) + (resting_pot - v) / tm</MathInline>
+    </TimeDerivative>
+    <OnCondition target_regime="refractory">
+     <StateAssignment variable="v">
+      <MathInline>reset_pot</MathInline>
+     </StateAssignment>
+     <StateAssignment variable="t_spike">
+      <MathInline>t</MathInline>
+     </StateAssignment>
+     <EventOut port="spike"/>
+     <Trigger>
+      <MathInline>v > threshold_pot</MathInline>
+     </Trigger>
+    </OnCondition>
+   </Regime>
+   <Regime name="refractory">
+    <OnCondition target_regime="integrating">
+     <Trigger>
+      <MathInline>t > (t_spike + tau_refractory)</MathInline>
+     </Trigger>
+    </OnCondition>
+   </Regime>
+   <StateVariable dimension="?" name="v"/>
+   <StateVariable dimension="?" name="t_spike"/>
+  </Dynamics>
+  <AnalogReducePort dimension="?" name="I_Syn" reduce_op="+"/>
+  <AnalogSendPort name="v"/>
+  <EventSendPort name="spike"/>
+  <Parameter dimension="?" name="Cm"/>
+  <Parameter dimension="?" name="threshold_pot"/>
+  <Parameter dimension="?" name="resting_pot"/>
+  <Parameter dimension="?" name="reset_pot"/>
+  <Parameter dimension="?" name="tm"/>
+  <Parameter dimension="?" name="tau_refractory"/>
+ </ComponentClass>
+</SpineML>

@@ -1,0 +1,27 @@
+<NML:SpineMLType>
+    <NML:ComponentClass name="LeakyIAF" type="neuronbody">
+        <NML:Dynamics initial_regime="integrating">
+            <NML:Regime name="integrating">
+                <NML:TimeDerivative variable="V">
+                    <NML:MathInline>((I_Syn) / C) + (Vr - V) / (R*C)</NML:MathInline>
+                </NML:TimeDerivative>
+                <NML:OnCondition target_regime="integrating">
+                    <NML:StateAssignment variable="V">
+                        <NML:MathInline>Vr</NML:MathInline>
+                    </NML:StateAssignment>
+                    <NML:Trigger>
+                        <NML:MathInline>V &gt; Vt</NML:MathInline>
+                    </NML:Trigger>
+                </NML:OnCondition>
+            </NML:Regime>
+            <NML:StateVariable name="V" dimension="mV"/>
+        </NML:Dynamics>
+        <NML:Port name="I_syn" reduce_op="+" dimension="mA"/>
+        <NML:Parameter name="C" dimension="nS"/>
+        <NML:Parameter name="C" dimension="nS"/>
+        <NML:Parameter name="Vt" dimension="mV"/>
+        <NML:Parameter name="Er" dimension="mV"/>
+        <NML:Parameter name="Vr" dimension="mV"/>
+        <NML:Parameter name="R" dimension="MOhm"/>
+    </NML:ComponentClass>
+</NML:SpineMLType>

@@ -1,0 +1,39 @@
+<modelMetaData>
+ <population name="Population">
+  <xPos value="1.5"/>
+  <yPos value="2.35"/>
+  <animSpeed value="0.2"/>
+  <aspectRatio value="1.66667"/>
+  <colour blue="0" green="0" red="0"/>
+  <size value="1"/>
+  <tag value="1"/>
+  <x3D value="0"/>
+  <y3D value="0"/>
+  <z3D value="0"/>
+  <is_visualised value="0"/>
+ </population>
+ <population name="Spike Source">
+  <xPos value="-7.58"/>
+  <yPos value="2.53"/>
+  <animSpeed value="0.2"/>
+  <aspectRatio value="1.66667"/>
+  <colour blue="0" green="0" red="0"/>
+  <size value="1"/>
+  <tag value="4"/>
+  <x3D value="0"/>
+  <y3D value="0"/>
+  <z3D value="0"/>
+  <is_visualised value="0"/>
+ </population>
+ <projection destination="Population" showlabel="0" source="Spike Source" style="4">
+  <start x="-7.0804" y="2.49474"/>
+  <curves>
+   <curve>
+    <C1 xpos="-7.0804" ypos="2.35236"/>
+    <C2 xpos="-0.600251" ypos="2.37092"/>
+    <end xpos="0.666534" ypos="2.37092"/>
+   </curve>
+  </curves>
+  <synapseConnection name="Spike Source to Population Synapse 0 weight_update"/>
+ </projection>
+</modelMetaData>

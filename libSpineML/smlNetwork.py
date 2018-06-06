@@ -982,7 +982,8 @@ class PropertyType(GeneratedsSuper):
         else:
             eol_ = ''
         if self.AbstractValue is not None:
-            self.AbstractValue.export(outfile, level, namespace_, name_='AbstractValue', pretty_print=pretty_print)
+            #self.AbstractValue.export(outfile, level, namespace_, name_='AbstractValue', pretty_print=pretty_print)
+            self.AbstractValue.export(outfile, level, namespace_, name_='ValueList', pretty_print=pretty_print)
         if self.AbstractDistribution is not None:
             self.AbstractDistribution.export(outfile, level, namespace_, name_='AbstractDistribution', pretty_print=pretty_print)
     def build(self, node):

@@ -1,7 +1,5 @@
-from libSpineML import smlExperiment as exp
-from libSpineML import smlNetwork as net
-from libSpineML import smlComponent as com
 import sys
+from libSpineML import smlComponent as com
 
 # Create a new neuron body
 c = com.ComponentClassType('LeakyIAF','neuronbody')
@@ -35,4 +33,9 @@ c.add_Port(com.AnalogReducePortType('I_syn','+','mA'))
 
 # Finalise and Export
 LeakyIAF = com.SpineMLType(c)
-LeakyIAF.export(sys.stdout,0)
+LeakyIAF.export(sys.stdout,0,namespacedef_='')
+
+f = open('LeakyIAF.xml', 'w')
+sys.stdout = f
+LeakyIAF.export(sys.stdout,0,namespacedef_='')
+f.close()

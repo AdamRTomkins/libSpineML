@@ -1,0 +1,653 @@
+<LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="neuroarch">
+    <LL:Population>
+        <LL:Neuron name="LOB" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+        <LL:Projection dst_population="dmp">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"LOB to dmp Synapse 0 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="4.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="OPTU">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="3" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"LOB to OPTU Synapse 1 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="2.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="CCP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="1" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"LOB to CCP Synapse 2 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="4.000000e+00"/>
+                            <Value index="1" value="3.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="IDFP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"LOB to IDFP Synapse 3 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="MED" url="LIF.xml" size="6">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+        <LL:Projection dst_population="SPP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"MED to SPP Synapse 0 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="7.000000e+00"/>
+                            <Value index="1" value="4.000000e+00"/>
+                            <Value index="2" value="3.000000e+00"/>
+                            <Value index="3" value="2.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="OPTU">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="2" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="4" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="3" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="3" delay="0.000000e+00"/>
+                    <Connection src_neuron="3" dst_neuron="3" delay="0.000000e+00"/>
+                    <Connection src_neuron="3" dst_neuron="4" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="4" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="2" delay="0.000000e+00"/>
+                    <Connection src_neuron="5" dst_neuron="4" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"MED to OPTU Synapse 1 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="3.000000e+00"/>
+                            <Value index="1" value="2.000000e+00"/>
+                            <Value index="2" value="1.000000e+00"/>
+                            <Value index="3" value="5.000000e+00"/>
+                            <Value index="4" value="3.000000e+00"/>
+                            <Value index="5" value="2.000000e+00"/>
+                            <Value index="6" value="1.000000e+00"/>
+                            <Value index="7" value="2.000000e+00"/>
+                            <Value index="8" value="1.000000e+00"/>
+                            <Value index="9" value="2.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="DMP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"MED to DMP Synapse 2 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="7.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="optu">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"MED to optu Synapse 3 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                            <Value index="1" value="4.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="CCP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="3" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="3" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"MED to CCP Synapse 4 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                            <Value index="1" value="1.000000e+00"/>
+                            <Value index="2" value="1.000000e+00"/>
+                            <Value index="3" value="5.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="IDFP" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="SPP" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="DMP" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="CCP" url="LIF.xml" size="2">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="eb" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+        <LL:Projection dst_population="FB">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"eb to FB Synapse 0 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="7.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="dmp" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="optu" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="FB" url="LIF.xml" size="1">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="DLP" url="LIF.xml" size="2">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+        <LL:Projection dst_population="OPTU">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="5" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="5" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"DLP to OPTU Synapse 0 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                            <Value index="1" value="4.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="OPTU" url="LIF.xml" size="9">
+            <Property name="threshold_pot" dimension="?">
+                <ValueList value="-1.000000e+01"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <ValueList value="-6.000000e+01"/>
+            </Property>
+            <Property name="Cm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <ValueList value="-7.000000e+01"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <ValueList value="1.000000e+01"/>
+            </Property>
+            <Property name="rfact_period" dimension="?">
+                <ValueList value="0.000000e+00"/>
+            </Property>
+        </LL:Neuron>
+        <LL:Projection dst_population="LOB">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="7" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"OPTU to LOB Synapse 0 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="2.000000e+00"/>
+                            <Value index="1" value="4.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="dmp">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="7" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"OPTU to dmp Synapse 1 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                            <Value index="1" value="5.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="SPP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="6" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"OPTU to SPP Synapse 2 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                            <Value index="1" value="1.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="CCP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="6" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="7" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"OPTU to CCP Synapse 3 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="2.000000e+00"/>
+                            <Value index="1" value="1.400000e+01"/>
+                            <Value index="2" value="5.000000e+00"/>
+                            <Value index="3" value="1.000000e+01"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="DMP">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="1" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"OPTU to DMP Synapse 4 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="1.000000e+00"/>
+                            <Value index="1" value="1.000000e+00"/>
+                            <Value index="2" value="1.000000e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+        <LL:Projection dst_population="OPTU">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="3" delay="0.000000e+00"/>
+                    <Connection src_neuron="4" dst_neuron="2" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="4" delay="0.000000e+00"/>
+                    <Connection src_neuron="7" dst_neuron="5" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="3" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="5" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"OPTU to OPTU Synapse 5 weight_update' url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="4.000000e+00"/>
+                            <Value index="1" value="2.000000e+00"/>
+                            <Value index="2" value="1.600000e+01"/>
+                            <Value index="3" value="2.000000e+00"/>
+                            <Value index="4" value="2.600000e+01"/>
+                            <Value index="5" value="7.000000e+00"/>
+                            <Value index="6" value="2.100000e+01"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="CurrExp" url="CurrExp.xml">
+                    <Property name="tau_syn">
+                        <ValueList value="1.000000e+01"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+</LL:SpineML>

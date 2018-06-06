@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LL:SpineML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.shef.ac.uk/SpineMLNetworkLayer" xmlns:LL="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer" xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="Untitled Project">
+    <LL:Population>
+        <LL:Neuron name="Population" size="1" url="LIF.xml">
+            <Property name="Cm" dimension="?">
+                <FixedValue value="0.03937"/>
+            </Property>
+            <Property name="threshold_pot" dimension="?">
+                <FixedValue value="-50"/>
+            </Property>
+            <Property name="resting_pot" dimension="?">
+                <FixedValue value="-70"/>
+            </Property>
+            <Property name="reset_pot" dimension="?">
+                <FixedValue value="-55"/>
+            </Property>
+            <Property name="tm" dimension="?">
+                <FixedValue value="20"/>
+            </Property>
+            <Property name="tau_refractory" dimension="?">
+                <FixedValue value="2"/>
+            </Property>
+            <Property name="v" dimension="?">
+                <FixedValue value="-70"/>
+            </Property>
+            <Property name="t_spike" dimension="?">
+                <FixedValue value="0"/>
+            </Property>
+        </LL:Neuron>
+        <Layout url="none.xml" seed="123" minimum_distance="0"/>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="Spike Source" size="1" url="SpikeSource"/>
+        <Layout url="none.xml" seed="123" minimum_distance="0"/>
+        <LL:Projection dst_population="Population">
+            <LL:Synapse>
+                <AllToAllConnection>
+                    <Delay Dimension="ms">
+                        <FixedValue value="0"/>
+                    </Delay>
+                </AllToAllConnection>
+                <LL:WeightUpdate name="Spike Source to Population Synapse 0 weight_update" url="FixedWeight.xml" input_src_port="spike" input_dst_port="spike">
+                    <Property name="w" dimension="?">
+                        <FixedValue value="1"/>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="Spike Source to Population Synapse 0 postsynapse" url="AMPAstp.xml" input_src_port="w" input_dst_port="w" output_src_port="D" output_dst_port="I_Syn">
+                    <Property name="tD" dimension="?">
+                        <FixedValue value="0.6"/>
+                    </Property>
+                    <Property name="pv" dimension="?">
+                        <FixedValue value="1"/>
+                    </Property>
+                    <Property name="D" dimension="?">
+                        <FixedValue value="0"/>
+                    </Property>
+                </LL:PostSynapse>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+</LL:SpineML>

@@ -1,0 +1,29 @@
+<NML:SpineMLType>
+    <NML:ComponentClass xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="LeakyIAF" type="neuronbody">
+        <NML:Dynamics xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" initial_regime="integrating">
+            <NML:Regime xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="integrating">
+                <NML:TimeDerivative xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" variable="V">
+                    <NML:MathInline>((I_Syn) / C) + (Vr - V) / (R*C)</NML:MathInline>
+                </NML:TimeDerivative>
+                <NML:OnCondition xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" target_regime="integrating">
+                    <NML:StateAssignment xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" variable="V">
+                        <NML:MathInline>Vr</NML:MathInline>
+                    </NML:StateAssignment>
+                    <NML:EventOut xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" port="spike"/>
+                    <NML:Trigger xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer">
+                        <NML:MathInline>V &gt; Vt</NML:MathInline>
+                    </NML:Trigger>
+                </NML:OnCondition>
+            </NML:Regime>
+            <NML:StateVariable xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="V" dimension="mV"/>
+        </NML:Dynamics>
+        <NML:Port xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="spike"/>
+        <NML:Port xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="I_syn" reduce_op="+" dimension="mA"/>
+        <NML:Parameter xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="C" dimension="nS"/>
+        <NML:Parameter xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="C" dimension="nS"/>
+        <NML:Parameter xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="Vt" dimension="mV"/>
+        <NML:Parameter xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="Er" dimension="mV"/>
+        <NML:Parameter xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="Vr" dimension="mV"/>
+        <NML:Parameter xmlns:NML="http://www.shef.ac.uk/SpineMLComponentLayer" name="R" dimension="MOhm"/>
+    </NML:ComponentClass>
+</NML:SpineMLType>

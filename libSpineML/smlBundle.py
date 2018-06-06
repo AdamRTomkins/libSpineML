@@ -13,6 +13,7 @@ TODO:
 """
 import os
 import pdb
+import tempfile
 
 import smlExperiment # SpineML layer classes 	
 import smlNetwork          
@@ -23,7 +24,7 @@ class Bundle(object):
     Each specification is stored a list of objects.
     """
 
-    def __init__(self, experiments=None, networks=None, components=None):
+    def __init__(self, experiments=None, networks=None, components=None,project_dict=None):
         self.experiments = []
         self.components = []
         self.networks = []
@@ -64,6 +65,60 @@ class Bundle(object):
                         self.components.append(c)
             else:
                 raise TypeError('Invalid Component Input: %s' % str(type(components)))
+
+        if type(project_dict) is not type(None):
+            assert 'experiment' in project_dict
+            assert 'network' in project_dict
+            assert 'components' in project_dict
+
+            # set experiment          
+            # eg: 'experiment':('emperiment0.xml','<xml content>')
+            print project_dict['experiment']
+
+            experiment_file, experiment_xml = project_dict['experiment']
+        
+            with tempfile.NamedTemporaryFile() as temp:
+                temp.write(experiment_xml)
+                temp.flush()
+                temp.seek(0) 
+                exp_obj = smlExperiment.parse(temp,True)
+            
+            self.experiments.append(exp_obj)
+
+            # build up the experiment index
+            self.index[experiment_file] = {}
+            self.index[experiment_file]['experiment'] = {experiment_file:exp_obj}
+
+
+            # set network 
+            # eg: 'network':('model.xml','<xml content>')
+            network_file, network_xml = project_dict['network']
+
+            with tempfile.NamedTemporaryFile() as temp:
+                temp.write(network_xml)
+                temp.flush()
+                temp.seek(0) 
+                net_obj = smlNetwork.parse(temp,True)
+
+
+           
+            self.networks.append(net_obj)
+            self.index[experiment_file]['network'] = {}
+            self.index[experiment_file]['network'][network_file] = net_obj
+
+
+            # set components
+            for component_file,component_xml in project_dict['components']:
+                with tempfile.NamedTemporaryFile() as temp:
+                    temp.write(component_xml)
+                    temp.flush()
+                    temp.seek(0)
+                    comp_obj =  smlComponent.parse(temp,True)
+                    self.components.append(comp_obj) 
+
+            self.index[experiment_file]['component'] = {}
+            self.index[experiment_file]['component'][component_file] = comp_obj
+                
 
     def add_experiment(self, experiment,recursive=False):
         """Add a SpineML Experiment stored as SpineMLType types, to the bundle
