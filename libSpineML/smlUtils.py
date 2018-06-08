@@ -20,7 +20,7 @@ import cStringIO
 import graphviz as gv
 import matplotlib.pyplot as plt
 import networkx as nx
-import numpy as np
+import numpy as numpy
 
 import copy
 
@@ -286,15 +286,24 @@ def create_spineml_network(neurons, populations,
             # Get non-default values
             
             #value = net.FixedValueType(default_neuron_models[neurons[n]['mem_model']][np]) # Currently using a fixed value, should use valuelist
-            value = net.FixedValueType(default_neuron_models[n['name']][np]) # Currently using a fixed value, should use valuelist
+            #value = net.FixedValueType(index=0, value=default_neuron_models[n['name']][np]) # Currently using a fixed value, should use valuelist
             
+            prop_list = net.ValueListType()
+
+            # Add a value for every neuron
+            for i in numpy.arange(len(populations[p]['neurons'])):
+                #value = net.FixedValueType(default_neuron_models[update_name][np]) 
+                value = net.ValueType(index=int(i),value=float(default_neuron_models[n['name']][np]))
+                prop_list.add_Value(value)
+
             name = np
             dimension = '?'#Todo Add dimensions to property list 
             neuron_property = net.PropertyType()
             neuron_property.set_name(name)
             neuron_property.set_dimension(dimension)
-            neuron_property.set_AbstractValue(value)
+            neuron_property.set_AbstractValue(prop_list)
             neuron.add_Property(neuron_property)
+
         neuron.set_name(p)       
 
         component_file_name = n['filename']
@@ -322,16 +331,23 @@ def create_spineml_network(neurons, populations,
                     synapse_file_name = connection[3]['filename']
                     synapse_name = connection[3]['name']
                    
-
                     synapse_properties = []
+                    prop_list = net.ValueListType()
+
                     for np in default_neuron_models[synapse_name].keys():
-                        value = net.FixedValueType(default_neuron_models[synapse_name][np]) 
-            
+                        prop_list = net.ValueListType()
+
+                        # Add a value for every neuron
+                        for i in numpy.arange(len(populations[p]['neurons'])):
+                            #value = net.FixedValueType(default_neuron_models[update_name][np]) 
+                            value = net.ValueType(index=int(i),value=float(default_neuron_models[synapse_name][np]))
+                            prop_list.add_Value(value)
+
                         dimension = '?'#Todo Add dimensions to property list 
                         synapse_property = net.PropertyType()
                         synapse_property.set_name(np)
                         synapse_property.set_dimension(dimension)
-                        synapse_property.set_AbstractValue(value)
+                        synapse_property.set_AbstractValue(prop_list)
                         synapse_properties.append(synapse_property)
 
                     # Create a PostSynapse
@@ -349,40 +365,53 @@ def create_spineml_network(neurons, populations,
 
                     ## Create Connectivity
                     connection_list = net.ConnectionListType()
+                   
 
                     connection_type = net.ConnectionType(connection[0],connection[1],0) # zero delay
                     connection_list.add_Connection(connection_type)     
                     
-                    weightValue = net.ValueType(index=int(index),value=float(connection[2]))
-               
+                    #weightValue = net.ValueType(index=int(index),value=float(connection[2]))
+                    
+                   
+
                     # read this from projections
                     update_file_name = connection[4]['filename']
                     update_name = connection[4]['name']
-                    # Create a PostSynapse
-                    
+
+                    # Create a Weight Update               
                     update_properties = []
                     for np in default_neuron_models[update_name].keys():
-                        value = net.FixedValueType(default_neuron_models[update_name][np]) 
-            
+
+                        prop_list = net.ValueListType()
+                        #value = net.FixedValueType(default_neuron_models[update_name][np]) 
+                        value = net.ValueType(index=int(index),value=float(default_neuron_models[update_name][np]))
+                        prop_list.add_Value(value)
+ 
                         dimension = '?'#Todo Add dimensions to property list 
                         update_property = net.PropertyType()
                         update_property.set_name(np)
                         update_property.set_dimension(dimension)
-                        update_property.set_AbstractValue(value)
+                        #update_property.set_AbstractValue(value)
+                        update_property.set_AbstractValue(prop_list)
                         update_properties.append(update_property)
-
+    
  
                     weightUpdate = net.WeightUpdateType(
-                        name='"%s to %s Synapse %s weight_update' % (p,destination,cn),
+                        name='"%s_to_%s_Synapse_%s_weight_update' % (p,destination,cn),
                         url=update_file_name,
-                        Property=update_properties,
+                        #Property=update_properties,
                         # WIP store somewhere!
                         input_src_port=None,
                         input_dst_port=None,
                         feedback_src_port=None,
                         feedback_dst_port=None
                     )
-        
+
+                   
+                    
+                    ##
+                    weightUpdate.set_Property(update_properties)
+
                     output['components'].append(update_file_name)
                     
                     # Create Synapse
@@ -416,9 +445,7 @@ def create_spineml_network(neurons, populations,
         "</Synapse>":"</LL:Synapse>",
         "<PostSynapse":"<LL:PostSynapse",             # REQURED DUE TO PostSynapse Overlap
         "</PostSynapse>":"</LL:PostSynapse>",
-    
         "ConnectionList": "LL:ConnectionList",
-
         "WeightUpdate":"LL:WeightUpdate",
         '<SpineMLType>':
         '<LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="%s">' % project_name,
