@@ -47,9 +47,9 @@ default_neuron_models['FixedWeight'] = {'w'   :0.5}
 
 
 # ESN Model Neurons
-default_neuron_models['AnalogLIF'] =  {}
-default_neuron_models['AnalogCurrent'] = {}
-default_neuron_models['weight'] = {'w'   :1}
+default_neuron_models['ESNNode'] =  {}
+default_neuron_models['ESNConnection'] = {}
+default_neuron_models['ESNWeight'] = {'w'   :1}
 
     # Specify a list of weight updates, synapse modes and neuron model
 
@@ -535,16 +535,12 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
 
         name = neuron['name']
 
-        print "Name: %s " % name
-
         try:
             lpu = lpu_dict[name]
         except:
             # If the neuron is not in the LPU dict,
             lpu = 'unknown-visual'
             lpu_dict[name] = lpu
-
-        print "LPU: %s " % lpu
 
         neuroarch_dict[nid] = name
 
@@ -558,8 +554,6 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
 
             else:    
                 populations[lpu]['neurons'].append(name)
-
-            print "Populations: %s " % populations
 
             neurons[name] = neuron_params.copy()
             neurons[name]['name'] = name
