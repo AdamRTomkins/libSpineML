@@ -303,7 +303,8 @@ def create_spineml_network(neurons, populations,
 
         output['components'].append(component_file_name)
 
-        neuron.set_size(len(populations[p])) 
+        neuron.set_size(len(populations[p]['neurons']))
+
 
         # Assign to population
         population.set_Neuron(neuron)
@@ -507,12 +508,16 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
 
         name = neuron['name']
 
+        print "Name: %s " % name
+
         try:
             lpu = lpu_dict[name]
         except:
             # If the neuron is not in the LPU dict,
             lpu = 'unknown-visual'
             lpu_dict[name] = lpu
+
+        print "LPU: %s " % lpu
 
         neuroarch_dict[nid] = name
 
@@ -527,10 +532,12 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
             else:    
                 populations[lpu]['neurons'].append(name)
 
+            print "Populations: %s " % populations
+
             neurons[name] = neuron_params.copy()
             neurons[name]['name'] = name
             neurons[name]['pre'] = lpu
-            neurons[name]['index']= len(populations[lpu])-1
+            neurons[name]['index']= len(populations[lpu]['neurons'])-1
 
     for pre_id in connections_json['edges'].keys():
 
@@ -539,6 +546,7 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
         for post_id in connections_json['edges'][pre_id].keys():
 
             post_neuron = neuroarch_dict[post_id]
+
 
             synapse_number = 1; # WIP extract synapses
 

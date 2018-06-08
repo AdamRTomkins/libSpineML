@@ -1,6 +1,6 @@
 <LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="drosophila">
     <LL:Population>
-        <LL:Neuron name="unknown-visual" url="LIF.xml" size="2">
+        <LL:Neuron name="unknown-visual" url="LIF.xml" size="47">
             <Property name="threshold_pot" dimension="?">
                 <ValueList value="-1.000000e+01"/>
             </Property>
@@ -23,7 +23,7 @@
         <LL:Projection dst_population="unknown-visual">
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -38,7 +38,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -53,7 +53,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -68,7 +68,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -83,7 +83,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -98,7 +98,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -113,7 +113,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -128,7 +128,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -143,7 +143,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -158,7 +158,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -173,7 +173,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -188,7 +188,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -203,7 +203,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="5" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -218,7 +218,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -233,7 +233,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -248,7 +248,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="5" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -263,7 +263,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -278,7 +278,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -293,7 +293,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -308,7 +308,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="35" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -323,7 +323,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -338,7 +338,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="11" dst_neuron="40" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -353,7 +353,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -368,7 +368,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -383,7 +383,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="13" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -398,7 +398,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="14" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -413,7 +413,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="28" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -428,7 +428,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="5" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -443,7 +443,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="13" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -458,7 +458,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -473,7 +473,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -488,7 +488,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="19" dst_neuron="34" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -503,7 +503,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="19" dst_neuron="45" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -518,7 +518,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -533,7 +533,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="5" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -548,7 +548,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="11" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -563,7 +563,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -578,7 +578,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="38" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -593,7 +593,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -608,7 +608,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="35" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -623,7 +623,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -638,7 +638,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -653,7 +653,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="14" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -668,7 +668,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="24" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -683,7 +683,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -698,7 +698,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="25" dst_neuron="23" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -713,7 +713,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="25" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -728,7 +728,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="41" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -743,7 +743,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="11" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -758,7 +758,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="26" dst_neuron="39" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -773,7 +773,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -788,7 +788,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -803,7 +803,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="28" dst_neuron="19" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -818,7 +818,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -833,7 +833,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -848,7 +848,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="29" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -863,7 +863,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -878,7 +878,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -893,7 +893,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="31" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -908,7 +908,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -923,7 +923,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -938,7 +938,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -953,7 +953,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -968,7 +968,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -983,7 +983,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -998,7 +998,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1013,7 +1013,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1028,7 +1028,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1043,7 +1043,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1058,7 +1058,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="32" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1073,7 +1073,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1088,7 +1088,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1103,7 +1103,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1118,7 +1118,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="28" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1133,7 +1133,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="5" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1148,7 +1148,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="25" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1163,7 +1163,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1178,7 +1178,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1193,7 +1193,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1208,7 +1208,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1223,7 +1223,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1238,7 +1238,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1253,7 +1253,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1268,7 +1268,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="25" dst_neuron="23" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1283,7 +1283,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1298,7 +1298,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1313,7 +1313,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1328,7 +1328,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="13" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1343,7 +1343,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1358,7 +1358,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="31" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1373,7 +1373,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1388,7 +1388,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="32" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1403,7 +1403,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="32" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1418,7 +1418,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="29" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1433,7 +1433,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1448,7 +1448,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1463,7 +1463,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="32" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1478,7 +1478,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="29" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1493,7 +1493,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1508,7 +1508,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="46" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1523,7 +1523,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1538,7 +1538,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="33" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1553,7 +1553,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="34" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1568,7 +1568,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="35" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1583,7 +1583,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1598,7 +1598,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="36" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1613,7 +1613,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="13" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1628,7 +1628,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1643,7 +1643,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1658,7 +1658,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="13" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1673,7 +1673,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1688,7 +1688,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="28" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1703,7 +1703,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="5" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1718,7 +1718,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1733,7 +1733,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1748,7 +1748,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1763,7 +1763,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="13" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1778,7 +1778,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1793,7 +1793,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1808,7 +1808,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1823,7 +1823,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1838,7 +1838,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1853,7 +1853,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1868,7 +1868,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1883,7 +1883,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="37" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1898,7 +1898,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="28" dst_neuron="19" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1913,7 +1913,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1928,7 +1928,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1943,7 +1943,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1958,7 +1958,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1973,7 +1973,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -1988,7 +1988,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="38" dst_neuron="23" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2003,7 +2003,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2018,7 +2018,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2033,7 +2033,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="32" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2048,7 +2048,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2063,7 +2063,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2078,7 +2078,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2093,7 +2093,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2108,7 +2108,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2123,7 +2123,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2138,7 +2138,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2153,7 +2153,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2168,7 +2168,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2183,7 +2183,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2198,7 +2198,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="39" dst_neuron="19" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2213,7 +2213,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="35" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2228,7 +2228,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2243,7 +2243,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2258,7 +2258,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="38" dst_neuron="23" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2273,7 +2273,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="23" dst_neuron="36" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2288,7 +2288,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="32" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2303,7 +2303,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2318,7 +2318,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2333,7 +2333,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2348,7 +2348,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="35" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2363,7 +2363,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2378,7 +2378,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2393,7 +2393,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2408,7 +2408,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2423,7 +2423,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2438,7 +2438,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2453,7 +2453,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="32" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2468,7 +2468,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2483,7 +2483,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="5" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2498,7 +2498,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2513,7 +2513,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="28" dst_neuron="19" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2528,7 +2528,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="41" dst_neuron="44" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2543,7 +2543,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2558,7 +2558,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2573,7 +2573,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2588,7 +2588,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2603,7 +2603,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="5" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2618,7 +2618,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="28" dst_neuron="19" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2633,7 +2633,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2648,7 +2648,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2663,7 +2663,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="42" dst_neuron="29" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2678,7 +2678,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="42" dst_neuron="29" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2693,7 +2693,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="42" dst_neuron="29" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2708,7 +2708,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="42" dst_neuron="29" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2723,7 +2723,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="42" dst_neuron="43" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2738,7 +2738,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="42" dst_neuron="29" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2753,7 +2753,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2768,7 +2768,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2783,7 +2783,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2798,7 +2798,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="37" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2813,7 +2813,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2828,7 +2828,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2843,7 +2843,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="32" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2858,7 +2858,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2873,7 +2873,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2888,7 +2888,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2903,7 +2903,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2918,7 +2918,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2933,7 +2933,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="5" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2948,7 +2948,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2963,7 +2963,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2978,7 +2978,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="32" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -2993,7 +2993,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3008,7 +3008,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3023,7 +3023,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3038,7 +3038,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3053,7 +3053,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="43" dst_neuron="26" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3068,7 +3068,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3083,7 +3083,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3098,7 +3098,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="23" dst_neuron="33" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3113,7 +3113,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3128,7 +3128,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3143,7 +3143,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="35" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3158,7 +3158,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="28" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3173,7 +3173,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3188,7 +3188,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3203,7 +3203,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="10" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3218,7 +3218,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3233,7 +3233,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="13" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3248,7 +3248,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="28" dst_neuron="19" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3263,7 +3263,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3278,7 +3278,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="32" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3293,7 +3293,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3308,7 +3308,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3323,7 +3323,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3338,7 +3338,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3353,7 +3353,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="35" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3368,7 +3368,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3383,7 +3383,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3398,7 +3398,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="13" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3413,7 +3413,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3428,7 +3428,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3443,7 +3443,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="29" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3458,7 +3458,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="11" dst_neuron="40" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3473,7 +3473,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3488,7 +3488,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3503,7 +3503,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="45" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3518,7 +3518,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3533,7 +3533,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="20" dst_neuron="17" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3548,7 +3548,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3563,7 +3563,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3578,7 +3578,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="8" dst_neuron="27" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3593,7 +3593,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="17" dst_neuron="10" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3608,7 +3608,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3623,7 +3623,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3638,7 +3638,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="38" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3653,7 +3653,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="22" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3668,7 +3668,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3683,7 +3683,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3698,7 +3698,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3713,7 +3713,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="46" dst_neuron="44" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3728,7 +3728,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="16" dst_neuron="28" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3743,7 +3743,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="29" dst_neuron="16" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3758,7 +3758,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="8" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3773,7 +3773,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="2" dst_neuron="6" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3788,7 +3788,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3803,7 +3803,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="35" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3818,7 +3818,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3833,7 +3833,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3848,7 +3848,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="20" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3863,7 +3863,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="9" dst_neuron="1" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3878,7 +3878,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="0" dst_neuron="9" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3893,7 +3893,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="5" dst_neuron="42" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3908,7 +3908,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="24" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3923,7 +3923,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3938,7 +3938,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="6" dst_neuron="2" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3953,7 +3953,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
@@ -3968,7 +3968,7 @@
             </LL:Synapse>
             <LL:Synapse>
                 <ConnectionList>
-                    <Connection src_neuron="1" dst_neuron="1" delay="0.000000e+00"/>
+                    <Connection src_neuron="27" dst_neuron="22" delay="0.000000e+00"/>
                 </ConnectionList>
                 <LL:WeightUpdate name='"unknown-visual to unknown-visual Synapse 0 weight_update' url="FixedWeight.xml">
                     <Property name="w" dimension="?">
