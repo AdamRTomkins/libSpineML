@@ -51,10 +51,6 @@ default_neuron_models['ESNNode'] =  {}
 default_neuron_models['ESNConnection'] = {}
 default_neuron_models['ESNWeight'] = {'w'   :1}
 
-    # Specify a list of weight updates, synapse modes and neuron model
-
-
-
 def process_files(neuron_file,synapse_file):
     """ Convert the neuron and synapse files into populations, projections and neurons """
 
@@ -246,7 +242,7 @@ def process_files(neuron_file,synapse_file):
 
 
 def create_spineml_network(neurons, populations,   
-    projections,output=False,output_filename='model.xml',project_name= 'drosophila',network_components = None ):
+    projections,output=False,output_filename='model.xml',project_name= 'drosophila',network_components = None):
     """ convert projections and populations into a SpineML network """
 
 
@@ -328,9 +324,11 @@ def create_spineml_network(neurons, populations,
                 for index, connection in enumerate(projections[p][destination]):
             
                     # read this from projections
-                    synapse_file_name = connection[3]['filename']
-                    synapse_name = connection[3]['name']
-                   
+                    synapse_details = connection[3]
+                    synapse_file_name = synapse_details['filename']
+                    synapse_name = synapse_details['name']
+                    
+
                     synapse_properties = []
                     prop_list = net.ValueListType()
 
@@ -340,6 +338,8 @@ def create_spineml_network(neurons, populations,
                         # Add a value for every neuron
                         for i in numpy.arange(len(populations[p]['neurons'])):
                             #value = net.FixedValueType(default_neuron_models[update_name][np]) 
+                            #value = net.ValueType(index=int(i),value=float(default_neuron_models[synapse_name][np]))
+                            
                             value = net.ValueType(index=int(i),value=float(default_neuron_models[synapse_name][np]))
                             prop_list.add_Value(value)
 
@@ -375,16 +375,22 @@ def create_spineml_network(neurons, populations,
                    
 
                     # read this from projections
-                    update_file_name = connection[4]['filename']
-                    update_name = connection[4]['name']
+                    update_details = connection[4]
+                    
+                    update_file_name = update_details['filename']
+                    update_name = update_details['name']
 
                     # Create a Weight Update               
                     update_properties = []
                     for np in default_neuron_models[update_name].keys():
 
                         prop_list = net.ValueListType()
-                        #value = net.FixedValueType(default_neuron_models[update_name][np]) 
-                        value = net.ValueType(index=int(index),value=float(default_neuron_models[update_name][np]))
+                        #value = net.FixedValueType(default_neuron_models[update_name][np])
+
+                        if np in update_details['override'].keys():
+                            value = net.ValueType(index=int(index),value=float(update_details['override'][np]))                                
+                        else:
+                            value = net.ValueType(index=int(index),value=float(default_neuron_models[update_name][np]))
                         prop_list.add_Value(value)
  
                         dimension = '?'#Todo Add dimensions to property list 
@@ -510,7 +516,7 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
         neuron_params = {'mem_model':
                             {'name':'LIF', 'filename':'LIF.xml'},
                          'weight_update' :
-                            {'name':'FixedWeight', 'filename':'FixedWeight.xml'},
+                            {'name':'FixedWeight', 'filename':'FixedWeight.xml','override':{}},
                          'synapse' :
                             {'name':'CurrExp', 'filename':'CurrExp.xml'}
                         }
@@ -533,7 +539,11 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
 
         neuron = connections_json['nodes'][nid]
 
-        name = neuron['name']
+        try:
+            name = neuron['uname']
+        except:
+            name = neuron['name']
+
 
         try:
             lpu = lpu_dict[name]
@@ -562,15 +572,19 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
 
     for pre_id in connections_json['edges'].keys():
 
+        #pre_neuron = neuroarch_dict[pre_id]
         pre_neuron = neuroarch_dict[pre_id]
 
         for post_id in connections_json['edges'][pre_id].keys():
 
-            post_neuron = neuroarch_dict[post_id]
+            #post_neuron = neuroarch_dict[post_id]
+            post_neuron = post_id
 
-
-            synapse_number = 1; # WIP extract synapses
-
+            try:
+                synapse_number = connections_json['edges'][pre_id][post_id]['synapses']; # WIP extract synapses
+            except:
+                print connections_json['edges'][pre_id][post_id]
+                assert False
             # get the LPU of the pre neuron
             try:
                 pre_lpu = lpu_dict[pre_neuron]
@@ -595,12 +609,14 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
             if post_lpu not in projections[pre_lpu]: 
                 projections[pre_lpu][post_lpu] = []
 
-            synapse_information =  neuron_params['synapse']
-            weight_update_information = neuron_params['weight_update']
+    
+            synapse_information = copy.deepcopy(neuron_params['synapse'])
+            
+            # allow the number of synapses to act as a override to weight if required.           
+            weight_update_information = copy.deepcopy(neuron_params['weight_update'])
+            weight_update_information['override']['w'] = synapse_number
 
-
-
-            projections[pre_lpu][post_lpu].append((pre_index,post_index,int(synapse_number),synapse_information,weight_update_information))
+            projections[pre_lpu][post_lpu].append((pre_index,post_index,int(synapse_number),synapse_information, weight_update_information))
 
             
     return (neurons, populations, projections)
