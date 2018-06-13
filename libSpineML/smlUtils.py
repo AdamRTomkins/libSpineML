@@ -620,3 +620,76 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
 
             
     return (neurons, populations, projections)
+
+
+def extract_adjacency_matrix(populations,projections, weight_parameter=None):
+    """ given a popuation list, extract an adjacency matrix """
+    
+    # Calculate the size of the adjacency matrix
+    N = sum([len(populations[p]['neurons']) for p in populations.keys()])
+    
+    index = 0
+    neuron_index = {}
+    for p in populations:
+        for n in populations[p]['neurons']:
+            neuron_index[(p,n)] = index
+            index += 1
+    
+    adjacency_matrix = numpy.zeros((N,N)) 
+    
+    # populate adjacy matrix based on override value
+    for pre in projections:
+        for post in projections[pre]:
+            for con in projections[pre][post]:
+                pre_name = populations[pre]['neurons'][con[0]]
+                post_name = populations[post]['neurons'][con[1]]
+
+                pre_index = neuron_index[(pre,pre_name)] 
+                post_index = neuron_index[(post,post_name)] 
+
+                weight = 1
+                if weight_parameter != None:
+                    assert weight_parameter in con[4]['override']
+                    weight = con[4]['override'][weight_parameter]
+
+
+                adjacency_matrix[pre_index,post_index] = weight
+    
+    return adjacency_matrix, neuron_index
+
+def inject_adjacency_matrix(populations,projections, adjacency_matrix, neuron_index, weight_parameter='w'):
+    """given an adjacency matrix and its index, inject the weights into the projections, doesn't create or distroy connections"""
+    
+    # assert that all the index is in the original populations
+    for (population,name) in neuron_index.keys():
+        assert name in populations[population]['neurons']
+
+    # loop through the index, extract weight and inject it into the projections
+    for pre in projections:
+        for post in projections[pre]:
+            for con in projections[pre][post]:
+                pre_name = populations[pre]['neurons'][con[0]]
+                post_name = populations[post]['neurons'][con[1]]
+
+                pre_index = neuron_index[(pre,pre_name)] 
+                post_index = neuron_index[(post,post_name)] 
+
+                weight = con[4]['override'][weight_parameter] = adjacency_matrix[pre_index,post_index]
+            
+            
+    return populations,projections
+
+def set_esn_weights(populations,projections, weight_parameter='w',spectral_radius=1.0):
+    adjacency_matrix, neuron_index = extract_adjacency_matrix(populations,projections)  
+    rand_matrix = adjacency_matrix* (2*numpy.random.rand(adjacency_matrix.shape[0],adjacency_matrix.shape[1])-1)
+    
+    # compute the spectral radius of these weights:
+    radius = numpy.max(numpy.abs(numpy.linalg.eigvals(rand_matrix)))
+
+    # rescale them to reach the requested spectral radius:
+    rand_matrix = rand_matrix * (spectral_radius / radius)
+
+    populations_rand,projections_rand = inject_adjacency_matrix( populations,projections, rand_matrix, neuron_index, weight_parameter) 
+
+    return populations_rand, projections_rand, rand_matrix
+
