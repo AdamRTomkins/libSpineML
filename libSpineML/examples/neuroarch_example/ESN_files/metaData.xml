@@ -1,0 +1,55 @@
+<modelMetaData>
+ <population name="unknown-visual">
+  <xPos value="0"/>
+  <yPos value="0"/>
+  <animSpeed value="0.2"/>
+  <aspectRatio value="1.66667"/>
+  <colour blue="0" green="0" red="0"/>
+  <size value="1"/>
+  <tag value="-1"/>
+  <x3D value="0"/>
+  <y3D value="0"/>
+  <z3D value="0"/>
+  <is_visualised value="0"/>
+ </population>
+ <projection destination="unknown-visual" showlabel="0" source="unknown-visual" style="4">
+  <start x="0.5" y="0.5"/>
+  <curves>
+   <curve>
+    <C1 xpos="1" ypos="1"/>
+    <C2 xpos="0" ypos="1.4"/>
+    <end xpos="0" ypos="0.5"/>
+   </curve>
+  </curves>
+  <synapseConnection name="unknown-visual to unknown-visual Synapse 0 weight_update"/>
+  <synapseConnection name="unknown-visual to unknown-visual Synapse 1 weight_update"/>
+  <synapseConnection name="unknown-visual to unknown-visual Synapse 2 weight_update"/>
+  <synapseConnection name="unknown-visual to unknown-visual Synapse 3 weight_update"/>
+  <synapseConnection name="unknown-visual to unknown-visual Synapse 4 weight_update"/>
+  <synapseConnection name="unknown-visual to unknown-visual Synapse 5 weight_update"/>
+ </projection>
+ <population name="Population">
+  <xPos value="-4.64137"/>
+  <yPos value="7.03386"/>
+  <animSpeed value="0.2"/>
+  <aspectRatio value="1.66667"/>
+  <colour blue="0" green="172" red="255"/>
+  <size value="1"/>
+  <tag value="1"/>
+  <x3D value="0"/>
+  <y3D value="0"/>
+  <z3D value="0"/>
+  <is_visualised value="0"/>
+ </population>
+ <projection destination="unknown-visual" showlabel="0" source="Population" style="4">
+  <start x="-4.36017" y="6.53435"/>
+  <curves>
+   <curve>
+    <C1 xpos="-4.36017" ypos="3.2174"/>
+    <C2 xpos="-0.333622" ypos="3.2169"/>
+    <end xpos="-0.333622" ypos="0.5"/>
+   </curve>
+  </curves>
+  <synapseConnection name="Population to unknown-visual Synapse 0 weight_update"/>
+ </projection>
+</modelMetaData>
