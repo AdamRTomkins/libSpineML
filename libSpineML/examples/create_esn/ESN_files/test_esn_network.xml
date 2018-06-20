@@ -9,7 +9,7 @@
                 <LL:WeightUpdate name='"unknown-visual_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="0" value="1.000000e-01"/>
+                            <Value index="0" value="1.400930e+00"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -22,7 +22,7 @@
                 <LL:WeightUpdate name='"unknown-visual_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="1" value="1.000000e-01"/>
+                            <Value index="1" value="1.715685e+00"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -35,7 +35,7 @@
                 <LL:WeightUpdate name='"unknown-visual_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="2" value="1.000000e-01"/>
+                            <Value index="2" value="4.153864e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -48,7 +48,7 @@
                 <LL:WeightUpdate name='"unknown-visual_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="3" value="1.000000e-01"/>
+                            <Value index="3" value="9.412612e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -61,7 +61,7 @@
                 <LL:WeightUpdate name='"unknown-visual_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="4" value="1.000000e-01"/>
+                            <Value index="4" value="-1.135090e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -74,7 +74,38 @@
                 <LL:WeightUpdate name='"unknown-visual_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="5" value="1.000000e-01"/>
+                            <Value index="5" value="-8.581133e-01"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="ESNConnection" url="ESNConnection.xml"/>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="Input_1" url="ESNInput.xml" size="1"/>
+        <LL:Projection dst_population="unknown-visual">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"Input_1_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="-1.490212e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="ESNConnection" url="ESNConnection.xml"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="2" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name='"Input_1_to_unknown-visual_Synapse_0_weight_update' url="ESNWeight.xml">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="1" value="1.322057e+00"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>

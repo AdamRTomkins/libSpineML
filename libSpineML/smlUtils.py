@@ -48,6 +48,7 @@ default_neuron_models['FixedWeight'] = {'w'   :0.5}
 
 # ESN Model Neurons
 default_neuron_models['ESNNode'] =  {}
+default_neuron_models['ESNInput'] =  {}
 default_neuron_models['ESNConnection'] = {}
 default_neuron_models['ESNWeight'] = {'w'   :1}
 
@@ -319,10 +320,13 @@ def create_spineml_network(neurons, populations,
             for cn, destination in enumerate(projections[p]):
                 projection = net.ProjectionType(destination)
 
+                
                 # Add synapses
                 #For every connection, we will create a new synapse
                 for index, connection in enumerate(projections[p][destination]):
             
+                
+
                     # read this from projections
                     synapse_details = connection[3]
                     synapse_file_name = synapse_details['filename']
@@ -427,7 +431,7 @@ def create_spineml_network(neurons, populations,
                         PostSynapse=postSynapse
                     )
 
-
+                    
                     projection.add_Synapse(synapse)
 
 
@@ -518,7 +522,9 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
                          'weight_update' :
                             {'name':'FixedWeight', 'filename':'FixedWeight.xml','override':{}},
                          'synapse' :
-                            {'name':'CurrExp', 'filename':'CurrExp.xml'}
+                            {'name':'CurrExp', 'filename':'CurrExp.xml'},
+                         'input_model':
+                            {'name':'ESNInput', 'filename':'ESNInput.xml'}, # Add a new neuron class for inputs populations to allow for easy ESNs
                         }
     else:
         assert 'mem_model' in neuron_params
@@ -545,22 +551,40 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
             name = neuron['name']
 
 
-        try:
-            lpu = lpu_dict[name]
-        except:
-            # If the neuron is not in the LPU dict,
-            lpu = 'unknown-visual'
-            lpu_dict[name] = lpu
+        # Allow Input Populations 
+        if connections_json['nodes'][nid]['class'] == u'Input':
+            print " Adding Input Node: %s  " % name
+            lpu = name
+            lpu_dict[name] = lpu    
+        else:
+            try:
+                lpu = lpu_dict[name]
+            except:
+                # If the neuron is not in the LPU dict,
+                lpu = 'unknown-visual'
+                lpu_dict[name] = lpu
 
         neuroarch_dict[nid] = name
 
         if name not in neurons.keys():
 
-            if lpu not in populations: 
-                 populations[lpu] =  {
-                        'neuron_schema':neuron_params['mem_model'],
-                        'neurons': [name]
-                    }
+            if lpu not in populations:
+                 # TODO: Automatic LPU splitting for different models
+
+                 if not connections_json['nodes'][nid]['class'] == u'Input':
+                
+                    populations[lpu] =  {
+                            'neuron_schema':neuron_params['mem_model'],
+                            'neurons': [name]
+                        }
+                 else:
+            
+                    # ESN input population
+                    populations[lpu] =  {
+                            'neuron_schema':neuron_params['input_model'],
+                            'neurons': [name]
+                        }
+                    
 
             else:    
                 populations[lpu]['neurons'].append(name)
@@ -583,8 +607,9 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
             try:
                 synapse_number = connections_json['edges'][pre_id][post_id]['synapses']; # WIP extract synapses
             except:
-                print connections_json['edges'][pre_id][post_id]
+                print "Synapse Error"
                 assert False
+
             # get the LPU of the pre neuron
             try:
                 pre_lpu = lpu_dict[pre_neuron]
@@ -680,6 +705,8 @@ def inject_adjacency_matrix(populations,projections, adjacency_matrix, neuron_in
     return populations,projections
 
 def set_esn_weights(populations,projections, weight_parameter='w',spectral_radius=1.0):
+    print "WARNING: This resets all connection weights, including input weights"
+
     adjacency_matrix, neuron_index = extract_adjacency_matrix(populations,projections)  
     rand_matrix = adjacency_matrix* (2*numpy.random.rand(adjacency_matrix.shape[0],adjacency_matrix.shape[1])-1)
     
