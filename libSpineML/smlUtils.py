@@ -243,7 +243,7 @@ def process_files(neuron_file,synapse_file):
 
 
 def create_spineml_network(neurons, populations,   
-    projections,output=False,output_filename='model.xml',project_name= 'drosophila',network_components = None):
+    projections,output=False,output_filename='model.xml',network_name='model',project_name= 'drosophila',network_components = None):
     """ convert projections and populations into a SpineML network """
 
 
@@ -438,11 +438,12 @@ def create_spineml_network(neurons, populations,
                 population.add_Projection(projection)
         # add population to the network
         network.add_Population(population)      
-                
+        network.name = network_name
+
     # Write out network to xml
     io = cStringIO.StringIO()
     network.export(io,0)
-    network = io.getvalue()
+    network_xml = io.getvalue()
 
     # Cleanup Replace Abstract objects with non_abstract
     subs = {
@@ -463,14 +464,17 @@ def create_spineml_network(neurons, populations,
     }
 
     for k in subs:
-        network = network.replace(k,subs[k])
+        network_xml = network_xml.replace(k,subs[k])
     if output:
         with open(output_filename, 'w') as f:
-            f.write(network)
+            f.write(network_xml)
 
     # Create Output SpineML JSON reprentation
-    output['network']['name'] = 'model.xml'
-    output['network']['xml'] = network
+    output['network']['name'] = network_name
+    output['network']['filename'] = output_filename
+
+    output['network']['xml'] = network_xml
+    output['network']['component'] = network
 
     # WIP: Add each component xml too
     components = set(output['components'])

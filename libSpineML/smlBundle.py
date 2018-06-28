@@ -200,12 +200,57 @@ class Bundle(object):
     def create_project(self):
         """ Create a simple project file for use with Spine Creator """
 
-        insert =  '<File name="%si.xml"/>'
+        insert =  '<File name="%s.xml"/>'
         template = """<SpineCreatorProject><Network>%(network)s</Network><Components>%(components)s</Components><Layouts><File name="none.xml"/></Layouts><Experiments>%(experiments)s</Experiments><AdditionalFiles> </AdditionalFiles></SpineCreatorProject>"""
         
-        comps = " ".join([insert % c.name for c in self.components])
-        exps = " ".join([insert % c.name for c in self.experiments])
+        comps = " ".join([insert % c.ComponentClass.name for c in self.components])
         nets = " ".join([insert % c.name for c in self.networks])
+        exps = []
+        
+        for e in exps:
+            for exp in e.Experiment:
+                exps.append(insert % exp.name)
+
+        exps = "".join(exps)
 
         self.project = template % {"network":nets, "components":comps, "experiments":exps}
-        print "Saving"
+
+
+    def export_project(self, project_filename, project_file = ''):
+        """ Export the project into SpineML files
+        """
+        import cStringIO
+
+        # Export the project file
+        with open(project_file + project_filename, 'w') as f:
+            f.write(self.project)
+
+        # Export every component file
+        for c in self.components:
+            io = cStringIO.StringIO()
+            c.export(io,0)
+            c_xml = io.getvalue()
+
+            with open(project_file + c.ComponentClass.name + '.xml', 'w') as f:
+                f.write(c_xml)
+
+        # Export the network file
+        for n in self.networks:
+            io = cStringIO.StringIO()
+            n.export(io,0)
+            n_xml = io.getvalue()
+
+            with open(project_file + n.name + '.xml', 'w') as f:
+                f.write(n_xml)
+         
+
+        # Export the Experiments file
+        for e in self.experiments:
+            for exp in e.Experiment:
+                io = cStringIO.StringIO()
+                exp.export(io,0)
+                exp_xml = io.getvalue()
+
+                with open(project_file + exp.name + '.xml', 'w') as f:
+                    f.write(exp_xml)
+
