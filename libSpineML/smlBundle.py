@@ -197,4 +197,15 @@ class Bundle(object):
             raise TypeError('Invalid Component Input %s' % str(type(component)))
 
 
+    def create_project(self):
+        """ Create a simple project file for use with Spine Creator """
 
+        insert =  '<File name="%si.xml"/>'
+        template = """<SpineCreatorProject><Network>%(network)s</Network><Components>%(components)s</Components><Layouts><File name="none.xml"/></Layouts><Experiments>%(experiments)s</Experiments><AdditionalFiles> </AdditionalFiles></SpineCreatorProject>"""
+        
+        comps = " ".join([insert % c.name for c in self.components])
+        exps = " ".join([insert % c.name for c in self.experiments])
+        nets = " ".join([insert % c.name for c in self.networks])
+
+        self.project = template % {"network":nets, "components":comps, "experiments":exps}
+        print "Saving"
