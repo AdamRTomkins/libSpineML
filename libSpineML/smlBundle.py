@@ -19,6 +19,11 @@ import smlExperiment # SpineML layer classes
 import smlNetwork          
 import smlComponent  
 
+from smlUtils import clean_components_xml
+from smlUtils import clean_experiments_xml
+from smlUtils import clean_networks_xml
+
+
 class Bundle(object):
     """Bundle instances are a container class for the various spineML specifications.
     Each specification is stored a list of objects.
@@ -201,15 +206,16 @@ class Bundle(object):
         """ Create a simple project file for use with Spine Creator """
 
         insert =  '<File name="%s.xml"/>'
-        template = """<SpineCreatorProject><Network>%(network)s</Network><Components>%(components)s</Components><Layouts><File name="none.xml"/></Layouts><Experiments>%(experiments)s</Experiments><AdditionalFiles> </AdditionalFiles></SpineCreatorProject>"""
+        network_insert = '<File name="%s.xml" metaFile="metaData.xml"/>'
+        experiment_insert = '<File name="Experiment_%s.xml"/>'
+        template = """<?xml version="1.0" encoding="UTF-8"?><SpineCreatorProject><Network>%(network)s  </Network><Components>%(components)s</Components><Layouts><File name="none.xml"/></Layouts><Experiments>%(experiments)s</Experiments></SpineCreatorProject>"""
         
         comps = " ".join([insert % c.ComponentClass.name for c in self.components])
-        nets = " ".join([insert % c.name for c in self.networks])
+        nets = " ".join([network_insert % c.name for c in self.networks])
         exps = []
-        
-        for e in exps:
-            for exp in e.Experiment:
-                exps.append(insert % exp.name)
+        # Todo: Not hard code sing experiment file 
+        for i,e in enumerate(self.experiments):
+            exps.append(experiment_insert % str(i))
 
         exps = "".join(exps)
 
@@ -227,30 +233,23 @@ class Bundle(object):
 
         # Export every component file
         for c in self.components:
-            io = cStringIO.StringIO()
-            c.export(io,0)
-            c_xml = io.getvalue()
 
             with open(project_file + c.ComponentClass.name + '.xml', 'w') as f:
-                f.write(c_xml)
+                f.write(clean_components_xml(c))
 
         # Export the network file
         for n in self.networks:
-            io = cStringIO.StringIO()
-            n.export(io,0)
-            n_xml = io.getvalue()
-
             with open(project_file + n.name + '.xml', 'w') as f:
-                f.write(n_xml)
+                f.write(clean_networks_xml(n))
          
 
         # Export the Experiments file
-        for e in self.experiments:
-            for exp in e.Experiment:
-                io = cStringIO.StringIO()
-                exp.export(io,0)
-                exp_xml = io.getvalue()
+        for i, e in enumerate(self.experiments):
+            #for exp in e.Experiment:
+            with open(project_file + 'Experiment_%s.xml' % str(i), 'w') as f:
+                f.write(clean_experiments_xml(e))
 
-                with open(project_file + exp.name + '.xml', 'w') as f:
-                    f.write(exp_xml)
+
+        with open(project_file + 'metaData.xml', 'w') as f:
+                f.write('<modelMetaData></modelMetaData>')
 

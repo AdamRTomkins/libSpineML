@@ -724,3 +724,66 @@ def set_esn_weights(populations,projections, weight_parameter='w',spectral_radiu
 
     return populations_rand, projections_rand, rand_matrix
 
+def clean_components_xml(component):
+    """ clean the xml of automatically generated xml files to be recognised by libSpineML """
+    io = cStringIO.StringIO()
+    component.export(io,0)
+    c_xml = io.getvalue()
+
+    # Cleanup Replace Abstract objects with non_abstract
+    subs = {
+        "<NML:":"<",
+        "</NML:":"</",
+        '<SpineMLType>':
+        '<?xml version="1.0"?><SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLComponentLayer SpineMLComponentLayer.xsd" xmlns="http://www.shef.ac.uk/SpineMLComponentLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">',
+
+        '</SpineMLType>':'</SpineML>'
+    }
+
+    for k in subs:
+        c_xml = c_xml.replace(k,subs[k])
+
+    return c_xml
+
+def clean_experiments_xml(experiment):
+    # Write out network to xml
+    io = cStringIO.StringIO()
+    experiment.export(io,0)
+    experiment_xml = io.getvalue()
+
+    subs = {
+        "AbstractInput":"TimeVaryingInput",
+        "<SpineML>" : '<?xml version="1.0" encoding="UTF-8"?><SpineML xmlns:UL="http://www.shef.ac.uk/SpineMLNetworkLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.shef.ac.uk/SpineMLExperimentLayer" xsi:schemaLocation="http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd http://www.shef.ac.uk/SpineMLExperimentLayer SpineMLExperimentLayer.xsd">' 
+    }
+
+    for k in subs:
+        experiment_xml= experiment_xml.replace(k,subs[k])
+    return experiment_xml
+
+
+def clean_networks_xml(network,project_name='drosophila'):
+    io = cStringIO.StringIO()
+    network.export(io,0)
+    network_xml = io.getvalue()
+
+    # Cleanup Replace Abstract objects with non_abstract
+    subs = {
+        "AbstractConnection":"ConnectionList",
+        "AbstractValue":"FixedValue",
+        "Population":"LL:Population",
+        "Neuron":"LL:Neuron",
+        "Projection":"LL:Projection",
+        "<Synapse>":"<LL:Synapse>",             # REQURED DUE TO PostSynapse Overlap
+        "</Synapse>":"</LL:Synapse>",
+        "<PostSynapse":"<LL:PostSynapse",             # REQURED DUE TO PostSynapse Overlap
+        "</PostSynapse>":"</LL:PostSynapse>",
+        "ConnectionList": "LL:ConnectionList",
+        "WeightUpdate":"LL:WeightUpdate",
+        '<SpineMLType':
+        '<LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="%s"' % project_name,
+        '</SpineMLType>':'</LL:SpineML>'
+    }
+
+    for k in subs:
+        network_xml = network_xml.replace(k,subs[k])
+    return network_xml
