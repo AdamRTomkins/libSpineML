@@ -753,7 +753,10 @@ def clean_experiments_xml(experiment):
 
     subs = {
         "AbstractInput":"TimeVaryingInput",
-        "<SpineML>" : '<?xml version="1.0" encoding="UTF-8"?><SpineML xmlns:UL="http://www.shef.ac.uk/SpineMLNetworkLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.shef.ac.uk/SpineMLExperimentLayer" xsi:schemaLocation="http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd http://www.shef.ac.uk/SpineMLExperimentLayer SpineMLExperimentLayer.xsd">' 
+        "<SpineML>" : '<?xml version="1.0" encoding="UTF-8"?><SpineML xmlns:UL="http://www.shef.ac.uk/SpineMLNetworkLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.shef.ac.uk/SpineMLExperimentLayer" xsi:schemaLocation="http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd http://www.shef.ac.uk/SpineMLExperimentLayer SpineMLExperimentLayer.xsd">',
+        "AbstractOutput":"LogOutput",
+        "AbstractIntegrationMethod":"EulerIntegration"
+        
     }
 
     for k in subs:
