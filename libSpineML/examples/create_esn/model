@@ -9,7 +9,7 @@
                 <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 0 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="0" value="2.819421e-02"/>
+                            <Value index="0" value="7.978529e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -22,7 +22,7 @@
                 <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 1 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="1" value="-1.324080e+00"/>
+                            <Value index="1" value="6.148493e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -35,7 +35,7 @@
                 <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 2 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="2" value="1.157214e+00"/>
+                            <Value index="2" value="-6.147954e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -48,7 +48,7 @@
                 <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 3 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="3" value="1.096387e+00"/>
+                            <Value index="3" value="8.252604e-02"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -61,7 +61,7 @@
                 <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 4 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="4" value="-6.027169e-01"/>
+                            <Value index="4" value="-6.644042e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -74,7 +74,7 @@
                 <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 5 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="5" value="-4.312406e-01"/>
+                            <Value index="5" value="-6.773777e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -92,7 +92,7 @@
                 <LL:WeightUpdate name="Input_1 to unknown-visual Synapse 0 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="0" value="4.042583e-01"/>
+                            <Value index="0" value="4.218075e-02"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>
@@ -105,7 +105,7 @@
                 <LL:WeightUpdate name="Input_1 to unknown-visual Synapse 1 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
                     <Property name="w" dimension="?">
                         <ValueList>
-                            <Value index="1" value="-1.209631e+00"/>
+                            <Value index="1" value="-4.926245e-01"/>
                         </ValueList>
                     </Property>
                 </LL:WeightUpdate>

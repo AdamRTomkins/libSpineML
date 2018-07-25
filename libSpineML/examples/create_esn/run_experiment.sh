@@ -9,7 +9,7 @@ export SYSTEMML_INSTALL_PATH
 
 #rm /home/ra/spineml-2-brahms/temp/log/*
 
-/usr/bin/convert_script_s2b -m ./$1/ -e 0 -w /home/ra/spineml-2-brahms -r
+/usr/bin/convert_script_s2b -m ./$1/ -e 0 -w /home/ra/spineml-2-brahms #-r
 
 #touch ./data/$1/null  
 #rm ./data/$1/* 
