@@ -10,7 +10,9 @@ TODO:
 ## export all as a loop through
 ## export each element, as a pass through
 ## import a project file
+
 """
+
 import os
 import pdb
 import tempfile
@@ -134,6 +136,7 @@ class Bundle(object):
             may provide a more organic structure             
 
         """
+        
         if type(experiment) is smlExperiment.SpineMLType:
             self.experiments.append(experiment)
         elif type(experiment) is str:
@@ -207,7 +210,7 @@ class Bundle(object):
 
         insert =  '<File name="%s.xml"/>'
         network_insert = '<File name="%s.xml" metaFile="metaData.xml"/>'
-        experiment_insert = '<File name="Experiment_%s.xml"/>'
+        experiment_insert = '<File name="experiment%s.xml"/>'
         template = """<?xml version="1.0" encoding="UTF-8"?><SpineCreatorProject><Network>%(network)s  </Network><Components>%(components)s</Components><Layouts><File name="none.xml"/></Layouts><Experiments>%(experiments)s</Experiments></SpineCreatorProject>"""
         
         comps = " ".join([insert % c.ComponentClass.name for c in self.components])
@@ -239,14 +242,15 @@ class Bundle(object):
 
         # Export the network file
         for n in self.networks:
-            with open(project_file + n.name + '.xml', 'w') as f:
+            # Do we need to support multiple networks.
+            with open(project_file + 'model.xml', 'w') as f:
                 f.write(clean_networks_xml(n))
          
 
         # Export the Experiments file
         for i, e in enumerate(self.experiments):
             #for exp in e.Experiment:
-            with open(project_file + 'Experiment_%s.xml' % str(i), 'w') as f:
+            with open(project_file + 'experiment%s.xml' % str(i), 'w') as f:
                 f.write(clean_experiments_xml(e))
 
 

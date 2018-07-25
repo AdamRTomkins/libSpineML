@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><LL:SpineML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.shef.ac.uk/SpineMLNetworkLayer" xmlns:LL="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer" xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="model"> name="model">
+    <LL:Population>
+        <LL:Neuron name="unknown-visual" url="ESNNode.xml" size="3"/>
+        <LL:Projection dst_population="unknown-visual">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="1" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 0 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="2.819421e-02"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="unknown-visual to unknown-visual Synapse 0 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="2" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 1 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="1" value="-1.324080e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="unknown-visual to unknown-visual Synapse 1 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="1" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 2 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="2" value="1.157214e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="unknown-visual to unknown-visual Synapse 2 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="1" dst_neuron="2" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 3 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="3" value="1.096387e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="unknown-visual to unknown-visual Synapse 3 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="2" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 4 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="4" value="-6.027169e-01"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="unknown-visual to unknown-visual Synapse 4 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="2" dst_neuron="1" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="unknown-visual to unknown-visual Synapse 5 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="5" value="-4.312406e-01"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="unknown-visual to unknown-visual Synapse 5 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+    <LL:Population>
+        <LL:Neuron name="Input_1" url="ESNInput.xml" size="1"/>
+        <LL:Projection dst_population="unknown-visual">
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="0" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="Input_1 to unknown-visual Synapse 0 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="0" value="4.042583e-01"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="Input_1 to unknown-visual Synapse 0 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+            <LL:Synapse>
+                <ConnectionList>
+                    <Connection src_neuron="0" dst_neuron="2" delay="0.000000e+00"/>
+                </ConnectionList>
+                <LL:WeightUpdate name="Input_1 to unknown-visual Synapse 1 weight_update" url="ESNWeight.xml" input_src_port="activation" input_dst_port="in">
+                    <Property name="w" dimension="?">
+                        <ValueList>
+                            <Value index="1" value="-1.209631e+00"/>
+                        </ValueList>
+                    </Property>
+                </LL:WeightUpdate>
+                <LL:PostSynapse name="Input_1 to unknown-visual Synapse 1 postsynapse" url="ESNConnection.xml" input_src_port="out" input_dst_port="I" output_src_port="I_in" output_dst_port="Input"/>
+            </LL:Synapse>
+        </LL:Projection>
+    </LL:Population>
+</LL:SpineML>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?><SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLComponentLayer SpineMLComponentLayer.xsd" xmlns="http://www.shef.ac.uk/SpineMLComponentLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ComponentClass name="ESNNode" type="neuron_body">
+        <Dynamics initial_regime="integrating">
+            <Regime name="integrating"/>
+            <Alias name="activation" dimension="?">
+                <MathInline>tanh(Input + Synapse2)</MathInline>
+            </Alias>
+        </Dynamics>
+        <AnalogReducePort name="Input" reduce_op="+" dimension="?"/>
+        <AnalogSendPort name="activation"/>
+        <AnalogReducePort name="Synapse2" reduce_op="+" dimension="?"/>
+    </ComponentClass>
+</SpineML>

@@ -109,6 +109,7 @@ def process_files(neuron_file,synapse_file):
 
         """
    
+        print "FUCK THE LOT"
 
         # TODO: Allow interchangavle neuron_params!
         if neuron_params != None:
@@ -232,8 +233,16 @@ def process_files(neuron_file,synapse_file):
 
 
             # ToDo: Add different per connection information based on JSON if it enabled
-            synapse_information =  neuron_params['synapse']
-            weight_update_infromation = neuron_params['weight_update']
+            synapse_information =  neuron_params['synapse'].copy()
+            weight_update_infomation = neuron_params['weight_update'].copy()
+
+            # Overright Synapse Names
+            # Format:  unknown-visual to unknown-visual Synapse 1 postsynapse
+            synapse_informaton['name'] = "%(pre_lpu)s to %(post_lpu)s Synapse %(synapse_number)s postsynapse" %             {'pre_lpu':pre_lpu, 'post_lpu':post_lpu,'synapse_number':synapse_number}
+            print  synapse_informaton['name'] 
+            
+            # Overright Synapse Weight Update Names
+            weight_update_information['name'] = "%(pre_lpu)s to %(post_lpu)s Synapse %(synapse_number)s update" %             {'pre_lpu':pre_lpu, 'post_lpu':post_lpu,'synapse_number':synapse_number}
 
 
 
@@ -331,6 +340,7 @@ def create_spineml_network(neurons, populations,
                     synapse_details = connection[3]
                     synapse_file_name = synapse_details['filename']
                     synapse_name = synapse_details['name']
+                    synapse_spineml_name = synapse_details['spineml_name'].replace('?', str(index))
                     
 
                     synapse_properties = []
@@ -356,14 +366,16 @@ def create_spineml_network(neurons, populations,
 
                     # Create a PostSynapse
                     postSynapse = net.PostSynapseType(
-                        name=synapse_name, 
+                        name=synapse_spineml_name, 
                         url = synapse_file_name,
                         Property=synapse_properties,
-                        input_src_port=None, 
-                        input_dst_port=None, 
-                        output_src_port=None, 
-                        output_dst_port=None
+                        input_src_port=synapse_details['input_src_port'], 
+                        input_dst_port=synapse_details['input_dst_port'], 
+                        output_src_port=synapse_details['output_src_port'], 
+                        output_dst_port=synapse_details['output_dst_port']
                     )
+                    
+                   
                     
                     output['components'].append(synapse_file_name)
 
@@ -383,6 +395,7 @@ def create_spineml_network(neurons, populations,
                     
                     update_file_name = update_details['filename']
                     update_name = update_details['name']
+                    update_spineml_name = update_details['spineml_name'].replace('?', str(index))
 
                     # Create a Weight Update               
                     update_properties = []
@@ -407,12 +420,12 @@ def create_spineml_network(neurons, populations,
     
  
                     weightUpdate = net.WeightUpdateType(
-                        name='"%s_to_%s_Synapse_%s_weight_update' % (p,destination,cn),
+                        name=update_spineml_name,
                         url=update_file_name,
                         #Property=update_properties,
                         # WIP store somewhere!
-                        input_src_port=None,
-                        input_dst_port=None,
+                        input_src_port=update_details['input_src_port'],
+                        input_dst_port=update_details['input_dst_port'],
                         feedback_src_port=None,
                         feedback_dst_port=None
                     )
@@ -459,7 +472,7 @@ def create_spineml_network(neurons, populations,
         "ConnectionList": "LL:ConnectionList",
         "WeightUpdate":"LL:WeightUpdate",
         '<SpineMLType>':
-        '<LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="%s">' % project_name,
+        '<LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="%s">' % network_name, # TODO: Check changed from project name
         '</SpineMLType>':'</LL:SpineML>'
     }
 
@@ -644,6 +657,15 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
             # allow the number of synapses to act as a override to weight if required.           
             weight_update_information = copy.deepcopy(neuron_params['weight_update'])
             weight_update_information['override']['w'] = synapse_number
+            
+            
+            # Overright Synapse Names
+            synapse_information['spineml_name'] = "%(pre_lpu)s to %(post_lpu)s Synapse ? postsynapse" % {'pre_lpu':pre_lpu, 'post_lpu':post_lpu}
+            
+            
+            # Overright Synapse Weight Update Names
+            weight_update_information['spineml_name'] = "%(pre_lpu)s to %(post_lpu)s Synapse ? weight_update" % {'pre_lpu':pre_lpu, 'post_lpu':post_lpu}
+            
 
             projections[pre_lpu][post_lpu].append((pre_index,post_index,int(synapse_number),synapse_information, weight_update_information))
 
@@ -758,13 +780,13 @@ def clean_experiments_xml(experiment):
         "AbstractIntegrationMethod":"EulerIntegration"
         
     }
-
+    
     for k in subs:
         experiment_xml= experiment_xml.replace(k,subs[k])
     return experiment_xml
 
 
-def clean_networks_xml(network,project_name='drosophila'):
+def clean_networks_xml(network,network_name='model'):
     io = cStringIO.StringIO()
     network.export(io,0)
     network_xml = io.getvalue()
@@ -782,8 +804,10 @@ def clean_networks_xml(network,project_name='drosophila'):
         "</PostSynapse>":"</LL:PostSynapse>",
         "ConnectionList": "LL:ConnectionList",
         "WeightUpdate":"LL:WeightUpdate",
-        '<SpineMLType':
-        '<LL:SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="%s"' % project_name,
+        
+       '<SpineMLType': '<?xml version="1.0" encoding="UTF-8"?><LL:SpineML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.shef.ac.uk/SpineMLNetworkLayer" xmlns:LL="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer" xsi:schemaLocation="http://www.shef.ac.uk/SpineMLLowLevelNetworkLayer SpineMLLowLevelNetworkLayer.xsd http://www.shef.ac.uk/SpineMLNetworkLayer SpineMLNetworkLayer.xsd" name="%s">' % network_name,
+        
+        
         '</SpineMLType>':'</LL:SpineML>'
     }
 
