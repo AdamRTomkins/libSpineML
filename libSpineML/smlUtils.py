@@ -348,94 +348,122 @@ def create_spineml_network(neurons, populations,
                 projection = net.ProjectionType(destination)
 
                 
+                # Create A connection and a weight list here
+                connection_list = net.ConnectionListType()
+                
+                # Weight Update List
+                # Create a Weight Update Property Dictionary
+                weight_update_property_list = {}
+
+                # Saynape property List
+                synapse_property_list = {}
+                
+                
+                
                 # Add synapses
                 #For every connection, we will create a new synapse
                 for index, connection in enumerate(projections[p][destination]):
-            
-                
 
+                                        # read this from projections
+                    update_details = connection[4]
+
+                    update_file_name = update_details['filename']
+                    update_name = update_details['name']
+                    update_spineml_name = update_details['spineml_name'].replace('?', str(index))
+                    
                     # read this from projections
                     synapse_details = connection[3]
                     synapse_file_name = synapse_details['filename']
                     synapse_name = synapse_details['name']
                     synapse_spineml_name = synapse_details['spineml_name'].replace('?', str(index))
                     
+                    if (index == 0):
+                        
+                        # For the first run, with access to the connection parameters, set up data structures for weight and post synapse
+
+                        # set up weight update  structure
+                        for np in default_neuron_models[update_name].keys():
+                            weight_update_property_list[np] = {}
+                            weight_update_property_list[np]['ValueList'] = net.ValueListType()
+
+                            dimension = '?'#Todo Add dimensions to property list 
+
+                            update_property = net.PropertyType()
+                            update_property.set_name(np)
+                            update_property.set_dimension(dimension)
+
+                            weight_update_property_list[np]['PropertyType'] = update_property    
+                        
+            
+                        # Create a synapse stuctures
+                        for np in default_neuron_models[synapse_name].keys():
+                            synapse_property_list[np] = {}
+                            synapse_property_list[np]['ValueList'] = net.ValueListType()
+
+                            dimension = '?'#Todo Add dimensions to property list 
+                            synapse_property = net.PropertyType()
+                            synapse_property.set_name(np)
+                            synapse_property.set_dimension(dimension)
+                            
+                            synapse_property_list[np][np]['PropertyType'] = synapse_property
+                           
+      
+                    for np in default_neuron_models[synapse_name].keys():
+                        
+
+                        # Add a synapse value for every neuron
+                        for i in numpy.arange(len(populations[p]['neurons'])):
+                            # WIP: Add synapse overwriting here
+                            value = net.ValueType(index=int(i),value=float(default_neuron_models[synapse_name][np]))
+                            synapse_property_list[np]['ValueList'].add_Value(value)
+
+
+                    output['components'].append(synapse_file_name)
+
+                    ## Create Connectivity
+
+                    connection_type = net.ConnectionType(connection[0],connection[1],0) # zero delay
+                    connection_list.add_Connection(connection_type)     
+                                      
+                    # Create a Weight Update                                
+                    
+                    for np in default_neuron_models[update_name].keys():
+
+                        # Add a new value to the property list
+                        if np in update_details['override'].keys():
+                            value = net.ValueType(index=int(index),value=float(update_details['override'][np]))                                
+                        else:
+                            value = net.ValueType(index=int(index),value=float(default_neuron_models[update_name][np]))
+
+                        weight_update_property_list[np]['ValueList'].add_Value(value)
+
 
                     synapse_properties = []
-                    prop_list = net.ValueListType()
-
-                    for np in default_neuron_models[synapse_name].keys():
-                        prop_list = net.ValueListType()
-
-                        # Add a value for every neuron
-                        for i in numpy.arange(len(populations[p]['neurons'])):
-                            #value = net.FixedValueType(default_neuron_models[update_name][np]) 
-                            #value = net.ValueType(index=int(i),value=float(default_neuron_models[synapse_name][np]))
-                            
-                            value = net.ValueType(index=int(i),value=float(default_neuron_models[synapse_name][np]))
-                            prop_list.add_Value(value)
-
-                        dimension = '?'#Todo Add dimensions to property list 
-                        synapse_property = net.PropertyType()
-                        synapse_property.set_name(np)
-                        synapse_property.set_dimension(dimension)
-                        synapse_property.set_AbstractValue(prop_list)
-                        synapse_properties.append(synapse_property)
-
+                    for np in synapse_property_list.keys():
+                        synapse_property_list[np]['PropertyType'].set_AbstractValue(synapse_property_list[np]['ValueList'])
+                        synapse_properties.append(synapse_property_list[np]['PropertyType'])
+                        
+                        
+                        
                     # Create a PostSynapse
                     postSynapse = net.PostSynapseType(
                         name=synapse_spineml_name, 
                         url = synapse_file_name,
-                        Property=synapse_properties,
                         input_src_port=synapse_details['input_src_port'], 
                         input_dst_port=synapse_details['input_dst_port'], 
                         output_src_port=synapse_details['output_src_port'], 
                         output_dst_port=synapse_details['output_dst_port']
                     )
                     
-                   
-                    
-                    output['components'].append(synapse_file_name)
-
-                    ## Create Connectivity
-                    connection_list = net.ConnectionListType()
-                   
-
-                    connection_type = net.ConnectionType(connection[0],connection[1],0) # zero delay
-                    connection_list.add_Connection(connection_type)     
-                    
-                    #weightValue = net.ValueType(index=int(index),value=float(connection[2]))
-                    
-                   
-
-                    # read this from projections
-                    update_details = connection[4]
-                    
-                    update_file_name = update_details['filename']
-                    update_name = update_details['name']
-                    update_spineml_name = update_details['spineml_name'].replace('?', str(index))
-
-                    # Create a Weight Update               
+                    postSynapse.set_Property(synapse_properties)
+                        
+                    #update_property.set_AbstractValue(value)
                     update_properties = []
-                    for np in default_neuron_models[update_name].keys():
-
-                        prop_list = net.ValueListType()
-                        #value = net.FixedValueType(default_neuron_models[update_name][np])
-
-                        if np in update_details['override'].keys():
-                            value = net.ValueType(index=int(index),value=float(update_details['override'][np]))                                
-                        else:
-                            value = net.ValueType(index=int(index),value=float(default_neuron_models[update_name][np]))
-                        prop_list.add_Value(value)
- 
-                        dimension = '?'#Todo Add dimensions to property list 
-                        update_property = net.PropertyType()
-                        update_property.set_name(np)
-                        update_property.set_dimension(dimension)
-                        #update_property.set_AbstractValue(value)
-                        update_property.set_AbstractValue(prop_list)
-                        update_properties.append(update_property)
-    
+                    for np in weight_update_property_list.keys():
+                        weight_update_property_list[np]['PropertyType'].set_AbstractValue(weight_update_property_list[np]['ValueList'])
+                        update_properties.append(weight_update_property_list[np]['PropertyType'])
+                    
+                    
  
                     weightUpdate = net.WeightUpdateType(
                         name=update_spineml_name,
@@ -455,15 +483,16 @@ def create_spineml_network(neurons, populations,
 
                     output['components'].append(update_file_name)
                     
-                    # Create Synapse
-                    synapse = net.SynapseType(
-                        AbstractConnection=connection_list,
-                        WeightUpdate=weightUpdate,
-                        PostSynapse=postSynapse
-                    )
+                # Create Synapse
+                synapse = net.SynapseType(
+                    AbstractConnection=connection_list,
+                    WeightUpdate=weightUpdate,
+                    PostSynapse=postSynapse
+                )
 
                     
-                    projection.add_Synapse(synapse)
+                # Only add a synapse when the full list has been populated    
+                projection.add_Synapse(synapse)
 
 
                 population.add_Projection(projection)
