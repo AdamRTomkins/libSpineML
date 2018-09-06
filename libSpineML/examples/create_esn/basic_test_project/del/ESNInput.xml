@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLComponentLayer SpineMLComponentLayer.xsd" xmlns="http://www.shef.ac.uk/SpineMLComponentLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <ComponentClass type="neuron_body" name="ESNInput">
+  <Dynamics initial_regime="integrating">
+   <Regime name="integrating"/>
+   <Alias dimension="?" name="activation">
+    <MathInline>Input</MathInline>
+   </Alias>
+  </Dynamics>
+  <AnalogReducePort dimension="?" name="Input" reduce_op="+"/>
+  <AnalogSendPort name="activation"/>
+ </ComponentClass>
+</SpineML>

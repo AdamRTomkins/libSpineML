@@ -1,0 +1,39 @@
+<modelMetaData>
+ <population name="Population">
+  <xPos value="-8.68"/>
+  <yPos value="0.01"/>
+  <animSpeed value="0.2"/>
+  <aspectRatio value="1.66667"/>
+  <colour blue="0" green="0" red="0"/>
+  <size value="1"/>
+  <tag value="1"/>
+  <x3D value="0"/>
+  <y3D value="0"/>
+  <z3D value="0"/>
+  <is_visualised value="0"/>
+ </population>
+ <projection destination="Population 1" showlabel="0" source="Population" style="4">
+  <start x="-7.84667" y="0.127411"/>
+  <curves>
+   <curve>
+    <C1 xpos="-5.35333" ypos="0.127411"/>
+    <C2 xpos="-5.35333" ypos="0.773755"/>
+    <end xpos="-3.89333" ypos="0.773755"/>
+   </curve>
+  </curves>
+  <synapseConnection name="Population to Population 1 Synapse 0 weight_update"/>
+ </projection>
+ <population name="Population 1">
+  <xPos value="-3.06"/>
+  <yPos value="0.91"/>
+  <animSpeed value="0.2"/>
+  <aspectRatio value="1.66667"/>
+  <colour blue="0" green="0" red="0"/>
+  <size value="1"/>
+  <tag value="2"/>
+  <x3D value="0"/>
+  <y3D value="0"/>
+  <z3D value="0"/>
+  <is_visualised value="0"/>
+ </population>
+</modelMetaData>

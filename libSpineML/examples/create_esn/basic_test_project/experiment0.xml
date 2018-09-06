@@ -5,16 +5,16 @@
             <EulerIntegration dt="0.2"/>
         </Simulation>
         <TimeVaryingInput name="Input_1_data" target="Input_1" target_indices="0" port="Input" start_time="0.000000e+00" duration="1.000000e+01">
-            <TimePointValue time="0.000000e+00" value="8.089143e-01"/>
-            <TimePointValue time="1.000000e+00" value="9.113537e-01"/>
-            <TimePointValue time="2.000000e+00" value="1.587996e-01"/>
-            <TimePointValue time="3.000000e+00" value="1.118429e-01"/>
-            <TimePointValue time="4.000000e+00" value="2.708634e-01"/>
-            <TimePointValue time="5.000000e+00" value="7.494627e-01"/>
-            <TimePointValue time="6.000000e+00" value="2.922776e-01"/>
-            <TimePointValue time="7.000000e+00" value="7.382024e-01"/>
-            <TimePointValue time="8.000000e+00" value="1.428424e-01"/>
-            <TimePointValue time="9.000000e+00" value="5.248258e-01"/>
+            <TimePointValue time="0.000000e+00" value="4.432503e-01"/>
+            <TimePointValue time="1.000000e+00" value="3.989271e-01"/>
+            <TimePointValue time="2.000000e+00" value="2.715715e-01"/>
+            <TimePointValue time="3.000000e+00" value="7.209503e-01"/>
+            <TimePointValue time="4.000000e+00" value="2.322995e-01"/>
+            <TimePointValue time="5.000000e+00" value="8.001873e-01"/>
+            <TimePointValue time="6.000000e+00" value="2.038074e-01"/>
+            <TimePointValue time="7.000000e+00" value="6.749242e-01"/>
+            <TimePointValue time="8.000000e+00" value="6.623675e-01"/>
+            <TimePointValue time="9.000000e+00" value="3.474921e-01"/>
         </TimeVaryingInput>
         <LogOutput name="unknown-visual_Output" target="unknown-visual" port="activation" start_time="0.000000e+00"/>
         <LogOutput name="Input_1_Output" target="Input_1" port="activation" start_time="0.000000e+00"/>

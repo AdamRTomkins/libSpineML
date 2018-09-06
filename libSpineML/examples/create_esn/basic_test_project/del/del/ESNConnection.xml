@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<SpineML xsi:schemaLocation="http://www.shef.ac.uk/SpineMLComponentLayer SpineMLComponentLayer.xsd" xmlns="http://www.shef.ac.uk/SpineMLComponentLayer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <ComponentClass type="postsynapse" name="ESNConnection">
+  <Dynamics initial_regime="Integrating">
+   <Regime name="Integrating"/>
+   <Alias dimension="?" name="I_in">
+    <MathInline>I</MathInline>
+   </Alias>
+  </Dynamics>
+  <AnalogReducePort dimension="?" name="I" reduce_op="+"/>
+  <AnalogSendPort name="I_in"/>
+ </ComponentClass>
+</SpineML>

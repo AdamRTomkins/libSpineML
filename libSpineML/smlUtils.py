@@ -52,6 +52,28 @@ default_neuron_models['ESNInput'] =  {}
 default_neuron_models['ESNConnection'] = {}
 default_neuron_models['ESNWeight'] = {'w'   :1}
 
+
+default_neuron_params = {'mem_model':
+                            {'name':'ESNNode', 'filename':'ESNNode.xml'},
+                         'weight_update' :
+                            {'name':'ESNWeight', 'filename':'ESNWeight.xml','override':{'w':0.2},
+                             'input_src_port':"activation",
+                             'input_dst_port':"in"
+                            
+                            
+                            },
+                         'synapse' :
+                            {'name':'ESNConnection', 'filename':'ESNConnection.xml',
+                            'input_src_port':"out",
+                             'input_dst_port':"I",
+                             'output_src_port':"I_in",
+                             'output_dst_port':"Input"                           
+                            
+                            },
+                         'input_model':
+                            {'name':'ESNInput', 'filename':'ESNInput.xml'}
+                }
+
 def process_files(neuron_file,synapse_file):
     """ Convert the neuron and synapse files into populations, projections and neurons """
 
@@ -109,15 +131,11 @@ def process_files(neuron_file,synapse_file):
 
         """
    
-        print "FUCK THE LOT"
-
         # TODO: Allow interchangavle neuron_params!
-        if neuron_params != None:
-            neuron_params = {'mem_model':
-                                {'name':'LIF', 'filename':'LIF.xml'},
-                             'weight_update' : {'name':'FixedWeight', 'filename':'FixedWeight.xml'},
-                             'synapse' : {'name':'CurrExp', 'filename':'CurrExp.xml'}
-                            }
+        if neuron_params == None:
+            print "Creating a ESN Network using the default neuron parameters."
+            neuron_params = default_neuron_params
+            
         else:
             assert 'mem_model' in neuron_params
             assert 'weight_update' in neuron_params
@@ -534,15 +552,8 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
     """
 
     if neuron_params == None:
-        neuron_params = {'mem_model':
-                            {'name':'LIF', 'filename':'LIF.xml'},
-                         'weight_update' :
-                            {'name':'FixedWeight', 'filename':'FixedWeight.xml','override':{}},
-                         'synapse' :
-                            {'name':'CurrExp', 'filename':'CurrExp.xml'},
-                         'input_model':
-                            {'name':'ESNInput', 'filename':'ESNInput.xml'}, # Add a new neuron class for inputs populations to allow for easy ESNs
-                        }
+        neuron_params = default_neuron_params
+        
     else:
         assert 'mem_model' in neuron_params
         assert 'weight_update' in neuron_params
@@ -624,8 +635,8 @@ def process_connection_json(connections_json,lpu_dict,neuron_params = None):
             try:
                 synapse_number = connections_json['edges'][pre_id][post_id]['synapses']; # WIP extract synapses
             except:
-                print "Synapse Error"
-                assert False
+                print "Synapse Error (%s, %s,) : %s" %(pre_id, post_id, connections_json['edges'][pre_id][post_id])
+                continue
 
             # get the LPU of the pre neuron
             try:
